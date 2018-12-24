@@ -34,14 +34,14 @@ public class SignUpActivity extends AppCompatActivity {
     public void signUp(View view) {
         Intent i = new Intent(SignUpActivity.this, Main2Activity.class);
         startActivity(i);
-        overridePendingTransition(R.anim.slideinright, R.anim.slideoutleft);
+        overridePendingTransition(R.anim.slideinleft, R.anim.slideoutright);
         return;
     }
 
     public void logIn(View view) {
         Intent i = new Intent(SignUpActivity.this, LoginActivity.class);
         startActivity(i);
-        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomin);
         return;
     }
 
