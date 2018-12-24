@@ -228,7 +228,7 @@
                 android:background="@color/transparent"
                 android:fontFamily="sans-serif"
                 android:text="Already a member? Login Here"
-                android:onClick="returntoLoginActivity"
+                android:onClick="logIn"
                 android:textAllCaps="false"
                 android:textColor="@color/textColor"
                 android:textSize="13sp" />
