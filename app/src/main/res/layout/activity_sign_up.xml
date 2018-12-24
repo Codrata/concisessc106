@@ -6,16 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-4dp"
+        android:foregroundGravity="bottom"
+        android:indeterminate="true"
+        android:padding="0dp"
+        android:theme="@style/Base.Widget.AppCompat.ProgressBar.Horizontal" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+            android:id="@+id/imgView_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_library_books_black_24dp" />
+
+    </RelativeLayout>
+
     <android.support.v7.widget.CardView
+        android:id="@+id/rellay1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
+        android:visibility="gone"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true">
 
@@ -43,8 +75,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="REGISTER"
                     android:textColor="@color/white"
@@ -68,8 +100,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView1"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp">
 
                 <ImageView
                     android:id="@+id/imgView_userIcon"
@@ -100,8 +132,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayout1"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp">
 
                 <ImageView
                     android:id="@+id/imgView_emailIcon"
@@ -132,8 +164,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayout2"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp">
 
                 <ImageView
                     android:id="@+id/imgView_passwordIcon"
@@ -157,7 +189,6 @@
                     android:textSize="15sp" />
 
 
-
             </RelativeLayout>
 
             <RelativeLayout
@@ -166,8 +197,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayout3"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp">
 
                 <ImageView
                     android:id="@+id/imgView_repasswordIcon"
@@ -199,8 +230,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/relativeLayout4"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:text="I agree to the Terms of Service"
                 android:textColor="@color/textColor" />
@@ -211,10 +242,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/chkBox1"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="sans-serif-medium"
+                android:onClick="signUp"
                 android:text="SIGN UP"
                 android:textColor="@color/white" />
 
@@ -227,8 +259,8 @@
                 android:layout_marginBottom="15dp"
                 android:background="@color/transparent"
                 android:fontFamily="sans-serif"
-                android:text="Already a member? Login Here"
                 android:onClick="logIn"
+                android:text="Already a member? Login Here"
                 android:textAllCaps="false"
                 android:textColor="@color/textColor"
                 android:textSize="13sp" />
