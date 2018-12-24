@@ -23,7 +23,7 @@
 
     <include layout="@layout/content_notes" />
 
-    <android.support.design.widget.FloatingActionButton
+    <com.codrata.concisessc_106.MovableFloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
