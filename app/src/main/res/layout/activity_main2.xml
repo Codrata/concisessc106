@@ -22,7 +22,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_height="?android:attr/listPreferredItemHeight"
@@ -36,7 +35,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginRight="6dip"
                         android:contentDescription="TODO"
-                        android:src="@drawable/ic_looks_one_black_24dp" />
+                        app:srcCompat="@drawable/ic_looks_one_black_24dp" />
 
                     <TextView
                         android:id="@+id/secondLine"
@@ -87,7 +86,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginRight="6dip"
                         android:contentDescription="TODO"
-                        android:src="@drawable/ic_looks_two_black_24dp" />
+                        app:srcCompat="@drawable/ic_looks_two_black_24dp" />
 
                     <TextView
                         android:id="@+id/secondLine_2"
@@ -136,7 +135,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginRight="6dip"
                         android:contentDescription="TODO"
-                        android:src="@drawable/ic_looks_3_black_24dp" />
+                        app:srcCompat="@drawable/ic_looks_3_black_24dp" />
 
                     <TextView
                         android:id="@+id/secondLine_3"
@@ -186,7 +185,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginRight="6dip"
                         android:contentDescription="TODO"
-                        android:src="@drawable/ic_looks_4_black_24dp" />
+                        app:srcCompat="@drawable/ic_looks_4_black_24dp" />
 
                     <TextView
                         android:id="@+id/secondLine_4"
@@ -234,7 +233,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginRight="6dip"
                         android:contentDescription="TODO"
-                        android:src="@drawable/ic_looks_5_black_24dp" />
+                        app:srcCompat="@drawable/ic_looks_5_black_24dp" />
 
                     <TextView
                         android:id="@+id/secondLine_5"
@@ -282,7 +281,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginRight="6dip"
                         android:contentDescription="TODO"
-                        android:src="@drawable/ic_looks_6_black_24dp" />
+                        app:srcCompat="@drawable/ic_looks_6_black_24dp" />
 
                     <TextView
                         android:id="@+id/secondLine_6"
