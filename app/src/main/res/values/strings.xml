@@ -11,4 +11,6 @@
     <string name="title_activity_note_select">NoteSelect</string>
     <string name="welcome">WELCOME</string>
     <string name="string_welcome" />
+    <string name="login_activity">LoginActivity</string>
+    <string name="sign_up_activity">SignupActivity</string>
 </resources>
