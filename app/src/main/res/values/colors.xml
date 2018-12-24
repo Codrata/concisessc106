@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="skyeblue">#87ceeb</color>
+
+
+
+    <color name="colorPrimary">#2991be</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#e51bd834</color>
+
     <color name="skyeblue">#87ceeb</color>
 
     <color name="white">#FFFFFF</color>
@@ -15,3 +24,6 @@
     <color name="editTextBG">#DADADA</color>
     <color name="textColor">#6e6e6e</color>
 </resources>
+
+</resources>
+

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
     tools:context=".LoginActivity">
 
     <ProgressBar
@@ -33,7 +32,7 @@
             android:layout_height="80dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_library_books_black_24dp" />
+            app:srcCompat="@drawable/ic_library_books_black_24dp" />
 
     </RelativeLayout>
 
@@ -42,16 +41,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
         app:cardCornerRadius="10dp"
         app:cardElevation="3dp"
         app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true"
-        android:visibility="gone"
-        >
+        app:cardUseCompatPadding="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -71,16 +69,16 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/circle"
                     android:padding="10dp"
-                    android:src="@drawable/ic_library_books_black_24dp"
-                    android:tint="@color/white" />
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_library_books_black_24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="@string/string_welcome"
+                    android:text="WELCOME"
                     android:textColor="@color/white"
                     android:textSize="22sp" />
 
@@ -102,8 +100,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView1"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp">
 
             </RelativeLayout>
 
@@ -114,8 +112,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayout1"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp">
 
             </RelativeLayout>
 
@@ -126,9 +124,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayout2"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="15dp">
-
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp">
 
 
                 <ImageView
@@ -148,7 +145,7 @@
                     android:layout_toRightOf="@+id/imgView_repasswordIcon"
                     android:background="@color/editTextBG"
                     android:hint="Enter Licencse Key"
-                    android:inputType="textVisiblePassword"
+                    android:inputType="textPassword"
                     android:paddingLeft="20dp"
                     android:textSize="15sp" />
 
@@ -160,8 +157,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayout3"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp">
 
             </RelativeLayout>
 
@@ -171,8 +168,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/relativeLayout4"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:text="Remember Me"
                 android:textColor="@color/textColor" />
@@ -183,12 +180,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/chkBox1"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="sans-serif-medium"
                 android:text="Login"
-                android:onClick="openMain2Activity"
                 android:textColor="@color/white" />
 
             <Button

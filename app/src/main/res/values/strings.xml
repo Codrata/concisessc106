@@ -6,7 +6,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Notes</string>
     <string name="title_notifications">Profile</string>
-    <string name="title_activity_notes">NotesActivity</string>
+    <string name="title_activity_notes">Notes</string>
     <string name="take_note">Take notes</string>
     <string name="title_activity_note_select">NoteSelect</string>
     <string name="welcome">WELCOME</string>

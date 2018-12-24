@@ -1,13 +1,11 @@
 package com.codrata.concisessc_106;
 
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.RelativeLayout;
 
 public class SignUpActivity extends AppCompatActivity {
-
 
 
     @Override
@@ -17,7 +15,16 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    public void returntoLoginActivity(View view) {
-        super.onBackPressed();
+    public void signUp(View view) {
+        Intent i = new Intent(SignUpActivity.this, Main2Activity.class);
+        startActivity(i);
+        return;
     }
+
+    public void logIn(View view) {
+        Intent i = new Intent(SignUpActivity.this, LoginActivity.class);
+        startActivity(i);
+        return;
+    }
+
 }
