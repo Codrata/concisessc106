@@ -41,7 +41,7 @@ public class SignUpActivity extends AppCompatActivity {
     public void logIn(View view) {
         Intent i = new Intent(SignUpActivity.this, LoginActivity.class);
         startActivity(i);
-        overridePendingTransition(R.anim.zoomin, R.anim.zoomin);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
         return;
     }
 
