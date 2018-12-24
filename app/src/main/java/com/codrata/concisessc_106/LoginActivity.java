@@ -32,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         rellay1 = findViewById(R.id.rellay1);
         loadingProgressBar = findViewById(R.id.loadingProgressBar);
         handler.postDelayed(runnable, 2000); //2000 is the timeout for the splash
+        overridePendingTransition(R.anim.zoomout, R.anim.zoomout);
 
     }
 
@@ -40,5 +41,12 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SignUpActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slideinright, R.anim.slideoutleft);
+    }
+
+    public void openMain2Activity(View view) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 }
