@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity">
+        <activity android:name=".SignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,15 @@
             android:label="@string/title_activity_notes"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".LoginActivity"
+            android:label="Login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="Concise SSC 106"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_note_select"
             android:theme="@style/AppTheme"></activity>
     </application>
 

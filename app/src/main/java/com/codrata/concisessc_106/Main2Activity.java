@@ -19,6 +19,7 @@ public class Main2Activity extends AppCompatActivity {
 
                     Intent i = new Intent(Main2Activity.this, NotesActivity.class);
                     startActivity(i);
+                    overridePendingTransition(R.anim.slideinright, R.anim.slideoutleft);
                     return true;
 
                 case R.id.navigation_notifications:
