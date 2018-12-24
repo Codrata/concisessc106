@@ -188,6 +188,7 @@
                 android:background="@color/colorPrimary"
                 android:fontFamily="sans-serif-medium"
                 android:text="Login"
+                android:onClick="openMain2Activity"
                 android:textColor="@color/white" />
 
             <Button
