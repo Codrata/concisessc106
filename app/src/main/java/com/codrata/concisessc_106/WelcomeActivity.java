@@ -51,7 +51,7 @@ public class WelcomeActivity extends AppCompatActivity {
     public void aboutactivity(View view) {
         Intent i = new Intent(WelcomeActivity.this, About.class);
         startActivity(i);
-        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+        overridePendingTransition(R.anim.slideindown, R.anim.zoomout);
         return;
     }
 }
