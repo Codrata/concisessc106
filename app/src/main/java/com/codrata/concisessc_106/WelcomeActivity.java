@@ -29,7 +29,7 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         linearLayout1 = findViewById(R.id.linearLayout1);
         loadingProgressBar = findViewById(R.id.loadingProgressBar);
-        handler.postDelayed(runnable, 1000); //1000 is the timeout for the splash
+        handler.postDelayed(runnable, 2000); //2000 is the timeout for the splash
 
 
     }
