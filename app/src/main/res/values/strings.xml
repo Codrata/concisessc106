@@ -8,4 +8,5 @@
     <string name="title_notifications">Profile</string>
     <string name="title_activity_notes">Notes</string>
     <string name="take_note">Take notes</string>
+    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
 </resources>

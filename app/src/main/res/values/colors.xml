@@ -15,4 +15,5 @@
     <color name="background">#2f4159</color>
     <color name="editTextBG">#DADADA</color>
     <color name="textColor">#6e6e6e</color>
+    <color name="lightgray">#ededed</color>
 </resources>

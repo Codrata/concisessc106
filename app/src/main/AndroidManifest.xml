@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignUpActivity">
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +21,7 @@
             android:label="@string/title_activity_notes"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ActivationActivity"
             android:label="Login"
             android:theme="@style/AppTheme" />
         <activity
@@ -31,7 +31,9 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".MovingFloatingActionButton"></activity>
+        <activity android:name=".MovingFloatingActionButton" />
+        <activity android:name=".ActivationRegistration" />
+        <activity android:name=".About"></activity>
     </application>
 
 </manifest>
