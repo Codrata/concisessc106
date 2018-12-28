@@ -42,7 +42,9 @@ public class NotesActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_notifications:
-
+                    Intent x = new Intent(NotesActivity.this, ProfileActivity.class);
+                    startActivity(x);
+                    overridePendingTransition(R.anim.slideinright, R.anim.slideoutright);
                     return true;
             }
             return false;
