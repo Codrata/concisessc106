@@ -1,4 +1,4 @@
-package com.codrata.concisessc_106;
+package com.codrata.concisessc_106.ActivatedApp;
 
 import android.app.Activity;
 

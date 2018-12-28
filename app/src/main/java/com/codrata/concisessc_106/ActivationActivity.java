@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.codrata.concisessc_106.ActivatedApp.Main2Activity;
+
 public class ActivationActivity extends AppCompatActivity {
 
 

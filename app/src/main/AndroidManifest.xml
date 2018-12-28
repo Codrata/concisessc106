@@ -25,11 +25,11 @@
             android:label="Login"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Main2Activity"
+            android:name=".ActivatedApp.Main2Activity"
             android:label="Concise SSC 106"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ActivatedApp.MainActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".MovingFloatingActionButton" />
         <activity android:name=".ActivationRegistration" />

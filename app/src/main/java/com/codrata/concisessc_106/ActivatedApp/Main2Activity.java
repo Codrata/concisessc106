@@ -1,4 +1,4 @@
-package com.codrata.concisessc_106;
+package com.codrata.concisessc_106.ActivatedApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import com.codrata.concisessc_106.NotesActivity;
+import com.codrata.concisessc_106.R;
 
 public class Main2Activity extends AppCompatActivity {
 

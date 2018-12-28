@@ -1,9 +1,12 @@
 package com.codrata.concisessc_106;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.codrata.concisessc_106.ActivatedApp.Main2Activity;
+import com.codrata.concisessc_106.ActivatedApp.MainActivity;
 
 public class ActivationRegistration extends AppCompatActivity {
 

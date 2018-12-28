@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.codrata.concisessc_106.ActivatedApp.Main2Activity;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStream;
