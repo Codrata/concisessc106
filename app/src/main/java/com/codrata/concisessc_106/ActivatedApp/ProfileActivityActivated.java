@@ -1,4 +1,4 @@
-package com.codrata.concisessc_106.DemoApp;
+package com.codrata.concisessc_106.ActivatedApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,12 +6,10 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.WindowManager;
 
-import com.codrata.concisessc_106.NotesActivity;
 import com.codrata.concisessc_106.R;
 
-public class Main2Activity extends AppCompatActivity {
+public class ProfileActivityActivated extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -20,21 +18,20 @@ public class Main2Activity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_dashboard:
-
-                    Intent i = new Intent(Main2Activity.this, NotesActivity.class);
+                    Intent i = new Intent(ProfileActivityActivated.this, NotesActivityActivated.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.slideinright, R.anim.slideoutright);
                     return true;
 
                 case R.id.navigation_notifications:
-                    Intent x = new Intent(Main2Activity.this, ProfileActivity.class);
-                    startActivity(x);
-                    overridePendingTransition(R.anim.slideinright, R.anim.slideoutright);
+
                     return true;
 
 
                 case R.id.navigation_home:
-
+                    Intent x = new Intent(ProfileActivityActivated.this, Main2ActivityActivated.class);
+                    startActivity(x);
+                    overridePendingTransition(R.anim.slideinright, R.anim.slideoutright);
                     return true;
             }
             return false;
@@ -44,11 +41,8 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        setContentView(R.layout.activity_main2);
-
+        setContentView(R.layout.activity_profile);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
     }
 }
