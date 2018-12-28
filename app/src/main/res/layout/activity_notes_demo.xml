@@ -37,6 +37,6 @@
         android:layout_height="56dp"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation2" />
+        app:menu="@menu/navigation2_demo" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
-import com.codrata.concisessc_106.ActivatedApp.MainActivity;
+import com.codrata.concisessc_106.DemoApp.Main2ActivityDemo;
+
 
 public class WelcomeActivity extends AppCompatActivity {
     ProgressBar loadingProgressBar;
@@ -43,7 +44,8 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void demoactivity(View view) {
-        Intent i = new Intent(WelcomeActivity.this, MainActivity.class);
+        Intent i;
+        i = new Intent(WelcomeActivity.this, Main2ActivityDemo.class);
         startActivity(i);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
         return;

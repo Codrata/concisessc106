@@ -1,4 +1,4 @@
-package com.codrata.concisessc_106;
+package com.codrata.concisessc_106.ActivatedApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.codrata.concisessc_106.ActivatedApp.Main2Activity;
+import com.codrata.concisessc_106.R;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class NotesActivity extends AppCompatActivity {
+public class NotesActivityActivated extends AppCompatActivity {
     EditText EditText1;
     private TextView mTextMessage;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -36,13 +36,13 @@ public class NotesActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_home:
-                    Intent i = new Intent(NotesActivity.this, Main2Activity.class);
+                    Intent i = new Intent(NotesActivityActivated.this, Main2ActivityActivated.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.slideinleft, R.anim.slideoutleft);
                     return true;
 
                 case R.id.navigation_notifications:
-                    Intent x = new Intent(NotesActivity.this, ProfileActivity.class);
+                    Intent x = new Intent(NotesActivityActivated.this, ProfileActivityActivity.class);
                     startActivity(x);
                     overridePendingTransition(R.anim.slideinright, R.anim.slideoutright);
                     return true;
@@ -54,7 +54,7 @@ public class NotesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notes);
+        setContentView(R.layout.activity_notes_demo);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

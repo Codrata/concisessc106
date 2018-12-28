@@ -7,10 +7,9 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.codrata.concisessc_106.NotesActivity;
 import com.codrata.concisessc_106.R;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2ActivityActivated extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -20,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_dashboard:
 
-                    Intent i = new Intent(Main2Activity.this, NotesActivity.class);
+                    Intent i = new Intent(Main2ActivityActivated.this, NotesActivityActivated.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.slideinright, R.anim.slideoutright);
                     return true;
@@ -40,7 +39,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main2_demo);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

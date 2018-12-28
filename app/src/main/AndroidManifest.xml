@@ -17,24 +17,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NotesActivity"
-            android:label="@string/title_activity_notes"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".ActivationActivity"
             android:label="Login"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ActivatedApp.Main2Activity"
+            android:name=".ActivatedApp.Main2ActivityActivated"
             android:label="Concise SSC 106"
             android:theme="@style/AppTheme" />
+        <activity android:name=".ActivatedApp.ProfileActivityActivity" />
+        <activity android:name=".ActivatedApp.NotesActivityActivated" />
         <activity
-            android:name=".ActivatedApp.MainActivity"
+            android:name=".ActivatedApp.MainActivityActivated"
             android:theme="@style/AppTheme" />
-        <activity android:name=".MovingFloatingActionButton" />
         <activity android:name=".ActivationRegistration" />
+        <activity android:name=".DemoApp.Main2ActivityDemo" />
+        <activity android:name=".DemoApp.NotesActivityDemo" />
+        <activity android:name=".DemoApp.ProfileActivityDemo" />
         <activity android:name=".About" />
-        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

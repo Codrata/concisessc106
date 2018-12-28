@@ -1,8 +1,8 @@
 package com.codrata.concisessc_106;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.res.Configuration;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.Gravity;
 import android.view.View;
@@ -27,7 +27,7 @@ public class About extends AppCompatActivity {
         Element ownerElement = new Element();
         ownerElement.setTitle("Written by:\t\tGbadero T’Oluwalope\n");
         Element developerElement = new Element();
-        developerElement.setTitle("Developed by:\t\tClinton Boss Man\n");
+        developerElement.setTitle("Developed by:\t\tCodrata\n");
 
 
         View aboutPage = new AboutPage(this)
