@@ -42,7 +42,7 @@ public class NotesActivityActivated extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_notifications:
-                    Intent x = new Intent(NotesActivityActivated.this, ProfileActivityActivity.class);
+                    Intent x = new Intent(NotesActivityActivated.this, ProfileActivityActivated.class);
                     startActivity(x);
                     overridePendingTransition(R.anim.slideinright, R.anim.slideoutright);
                     return true;
@@ -54,7 +54,7 @@ public class NotesActivityActivated extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notes_demo);
+        setContentView(R.layout.activity_notes);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

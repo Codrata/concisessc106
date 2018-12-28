@@ -25,10 +25,14 @@ public class Main2ActivityActivated extends AppCompatActivity {
                     return true;
 
                 case R.id.navigation_notifications:
+                    Intent x = new Intent(Main2ActivityActivated.this, ProfileActivityActivated.class);
+                    startActivity(x);
+                    overridePendingTransition(R.anim.slideinright, R.anim.slideoutright);
 
                     return true;
 
                 case R.id.navigation_home:
+
 
                     return true;
             }
@@ -39,7 +43,7 @@ public class Main2ActivityActivated extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2_demo);
+        setContentView(R.layout.activity_main2);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
