@@ -24,7 +24,7 @@
             android:name=".ActivatedApp.Main2ActivityActivated"
             android:label="Concise SSC 106"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ActivatedApp.ProfileActivityActivity" />
+        <activity android:name=".ActivatedApp.ProfileActivityActivated" />
         <activity android:name=".ActivatedApp.NotesActivityActivated" />
         <activity
             android:name=".ActivatedApp.MainActivityActivated"
