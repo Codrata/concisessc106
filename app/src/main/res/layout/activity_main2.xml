@@ -61,7 +61,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_toRightOf="@id/icon"
                         android:gravity="center_vertical"
-                        android:text="Example document"
+                        android:text="Introduction"
                         android:textColor="@android:color/white"
                         android:textSize="24sp" />
 
@@ -111,7 +111,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_toRightOf="@id/icon_2"
                         android:gravity="center_vertical"
-                        android:text="Example document"
+                        android:text="Functions"
                         android:textColor="@android:color/white"
                         android:textSize="24sp" />
 
@@ -160,7 +160,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_toRightOf="@id/icon_3"
                         android:gravity="center_vertical"
-                        android:text="Example document"
+                        android:text="Diffrentiation"
                         android:textColor="@android:color/white"
                         android:textSize="24sp" />
 
@@ -210,7 +210,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_toRightOf="@id/icon_4"
                         android:gravity="center_vertical"
-                        android:text="Example document"
+                        android:text="Integration"
                         android:textColor="@android:color/white"
                         android:textSize="24sp" />
                 </RelativeLayout>
@@ -258,7 +258,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_toRightOf="@id/icon_5"
                         android:gravity="center_vertical"
-                        android:text="Example document"
+                        android:text="Application of Calculus"
                         android:textColor="@android:color/white"
                         android:textSize="24sp" />
                 </RelativeLayout>
@@ -306,10 +306,11 @@
                         android:layout_alignParentRight="true"
                         android:layout_toRightOf="@id/icon_6"
                         android:gravity="center_vertical"
-                        android:text="Example document"
+                        android:text="Mathematics in Econs"
                         android:textColor="@android:color/white"
                         android:textSize="24sp" />
                 </RelativeLayout>
+
 
             </LinearLayout>
 
