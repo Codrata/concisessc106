@@ -33,7 +33,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".MovingFloatingActionButton" />
         <activity android:name=".ActivationRegistration" />
-        <activity android:name=".About"></activity>
+        <activity android:name=".About" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
