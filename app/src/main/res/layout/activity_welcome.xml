@@ -43,7 +43,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
-        android:visibility="gone"
         android:gravity="center">
 
 <LinearLayout
@@ -52,6 +51,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:background="#fcfcfc"
+    android:visibility="gone"
     android:gravity="center"
     android:id="@+id/linearLayout1">
     <LinearLayout
