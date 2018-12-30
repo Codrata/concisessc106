@@ -19,7 +19,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="300dp"
                 android:background="@drawable/gradientbackground"
                 android:orientation="vertical">
 
@@ -42,11 +42,11 @@
             </LinearLayout>
 
             <android.support.v7.widget.CardView
-                android:layout_width="370dp"
-                android:layout_height="120dp"
+                android:layout_width="330dp"
+                android:layout_height="90dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="275dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -146,7 +146,7 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/activationardId"
-                    android:layout_width="350dp"
+                    android:layout_width="300dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
@@ -192,7 +192,7 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/emailcardId"
-                    android:layout_width="350dp"
+                    android:layout_width="300dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
