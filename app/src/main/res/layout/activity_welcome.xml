@@ -52,7 +52,6 @@
     android:padding="10dp"
     android:background="#fcfcfc"
     android:gravity="center"
-    android:visibility="gone"
     android:id="@+id/linearLayout1">
     <LinearLayout
         android:clipToPadding="false"
@@ -124,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Question and Answers"/>
+                    android:text="How to Use The App"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -134,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="View Demo Question and Answers"
+                    android:text="know how to get the best out of this android application."
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
