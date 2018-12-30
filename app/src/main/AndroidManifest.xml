@@ -36,7 +36,8 @@
         <activity android:name=".DemoApp.ProfileActivityDemo" />
         <activity android:name=".About" />
         <activity android:name=".DemoApp.TopicReview" />
-        <activity android:name=".HowToUseApp"></activity>
+        <activity android:name=".HowToUseApp" />
+        <activity android:name=".DemoApp.BasicOperations"></activity>
     </application>
 
 </manifest>

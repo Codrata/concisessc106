@@ -63,4 +63,11 @@ public class Main2ActivityDemo extends AppCompatActivity {
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
         return;
     }
+
+    public void openbasicoperationsinmathematics(View view) {
+        Intent i = new Intent(getApplicationContext(), BasicOperations.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+        return;
+    }
 }
