@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.codrata.concisessc_106.R;
 
@@ -49,4 +50,12 @@ public class Main2ActivityActivated extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
     }
+
+    public void OpenFirstPDF(View view) {
+        Intent i = new Intent(Main2ActivityActivated.this, MainActivityActivated.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+        return;
+    }
+
 }

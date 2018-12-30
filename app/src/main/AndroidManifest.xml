@@ -31,6 +31,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".ActivationRegistration" />
         <activity android:name=".DemoApp.Main2ActivityDemo" />
+        <activity android:name=".DemoApp.MainActivityDemo" />
         <activity android:name=".DemoApp.NotesActivityDemo" />
         <activity android:name=".DemoApp.ProfileActivityDemo" />
         <activity android:name=".About" />

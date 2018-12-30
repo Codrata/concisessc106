@@ -24,6 +24,8 @@
                 android:orientation="vertical">
                 <RelativeLayout
                     android:layout_width="fill_parent"
+                    android:clickable="true"
+                    android:onClick="OpenFirstPDF"
                     android:layout_height="?android:attr/listPreferredItemHeight"
                     android:layout_margin="10dp">
 

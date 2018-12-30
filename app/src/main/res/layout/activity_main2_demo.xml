@@ -26,6 +26,8 @@
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_height="?android:attr/listPreferredItemHeight"
+                    android:clickable="true"
+                    android:onClick="OpenDemoPDF"
                     android:layout_margin="10dp">
 
                     <ImageView
