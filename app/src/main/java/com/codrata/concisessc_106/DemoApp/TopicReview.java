@@ -1,7 +1,7 @@
 package com.codrata.concisessc_106.DemoApp;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.WindowManager;
 
 import com.codrata.concisessc_106.R;
@@ -12,9 +12,9 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 
-public class MainActivityDemo extends AppCompatActivity {
+public class TopicReview extends AppCompatActivity {
 
-    public static final String SAMPLE_FILE = "ssc106way.pdf";
+    public static final String SAMPLE_FILE = "topicreview.pdf";
     private static final String TAG = MainActivityDemo.class.getSimpleName();
     Integer pageNumber = 0;
     String pdfFileName;
@@ -27,7 +27,7 @@ public class MainActivityDemo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        setContentView(R.layout.activity_main_demo);
+        setContentView(R.layout.activity_topic_review);
 
         PDFView pdfView = findViewById(R.id.pdfViewDemo);
 
@@ -55,8 +55,5 @@ public class MainActivityDemo extends AppCompatActivity {
                 .nightMode(false) // toggle night mode
                 .load();
 
-
     }
-
-
 }

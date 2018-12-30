@@ -57,4 +57,10 @@ public class Main2ActivityDemo extends AppCompatActivity {
         return;
     }
 
+    public void openTopicReview(View view) {
+        Intent i = new Intent(getApplicationContext(), TopicReview.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+        return;
+    }
 }

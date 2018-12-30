@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.codrata.concisessc_106.DemoApp.Main2ActivityDemo;
+import com.codrata.concisessc_106.DemoApp.TopicReview;
 
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -55,6 +56,13 @@ public class WelcomeActivity extends AppCompatActivity {
         Intent i = new Intent(WelcomeActivity.this, About.class);
         startActivity(i);
         overridePendingTransition(R.anim.slideindown, R.anim.zoomout);
+        return;
+    }
+
+    public void openHowToUseTheApp(View view) {
+        Intent i = new Intent(getApplicationContext(), HowToUseApp.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
         return;
     }
 }

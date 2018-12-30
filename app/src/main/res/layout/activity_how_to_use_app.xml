@@ -2,13 +2,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/black"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".DemoApp.MainActivityDemo">
+    tools:context=".HowToUseApp">
 
 
     <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfViewDemo"
+        android:id="@+id/pdfView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

@@ -1,10 +1,9 @@
-package com.codrata.concisessc_106.DemoApp;
+package com.codrata.concisessc_106;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.WindowManager;
+import android.os.Bundle;
 
-import com.codrata.concisessc_106.R;
+import com.codrata.concisessc_106.DemoApp.MainActivityDemo;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnDrawListener;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
@@ -12,10 +11,10 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 
-public class MainActivityDemo extends AppCompatActivity {
+public class HowToUseApp extends AppCompatActivity {
 
-    public static final String SAMPLE_FILE = "ssc106way.pdf";
-    private static final String TAG = MainActivityDemo.class.getSimpleName();
+    public static final String SAMPLE_FILE = "howtousetheapp.pdf";
+    private static final String TAG = WelcomeActivity.class.getSimpleName();
     Integer pageNumber = 0;
     String pdfFileName;
     PDFView pdfView;
@@ -23,13 +22,13 @@ public class MainActivityDemo extends AppCompatActivity {
     private OnLoadCompleteListener onLoadCompleteListener;
     private OnPageChangeListener onPageChangeListener;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-        setContentView(R.layout.activity_main_demo);
+        setContentView(R.layout.activity_how_to_use_app);
 
-        PDFView pdfView = findViewById(R.id.pdfViewDemo);
+        PDFView pdfView = findViewById(R.id.pdfView);
 
 
         pdfView.fromAsset(SAMPLE_FILE)
@@ -54,9 +53,5 @@ public class MainActivityDemo extends AppCompatActivity {
                 .pageFling(true) // make a fling change only a single page like ViewPager
                 .nightMode(false) // toggle night mode
                 .load();
-
-
     }
-
-
 }

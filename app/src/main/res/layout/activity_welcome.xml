@@ -115,6 +115,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circle"
+                    android:onClick="openHowToUseTheApp"
+                    android:clickable="true"
                     android:src="@drawable/img_qa"
                     android:scaleType="fitEnd"
                     android:padding="10dp"/>
