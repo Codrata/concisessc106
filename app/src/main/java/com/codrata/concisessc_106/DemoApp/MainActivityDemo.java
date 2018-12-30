@@ -31,7 +31,7 @@ public class MainActivityDemo extends AppCompatActivity {
 
 
         pdfView.fromAsset(SAMPLE_FILE)
-                .pages(0, 1, 2)// limited to 3 pages for the Demo sample before Activation
+                .pages(0, 1, 2, 3)// limited to 3 pages for the Demo sample before Activation
                 .enableSwipe(true) // allows to block changing pages using swipe
                 .swipeHorizontal(true)
                 .enableDoubletap(true)
