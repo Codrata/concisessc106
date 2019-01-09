@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.codrata.concisessc_106">
 
     <application
@@ -8,7 +9,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,20 +26,26 @@
             android:name=".ActivatedApp.Main2ActivityActivated"
             android:label="Concise SSC 106"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ActivatedApp.ProfileActivityActivated" />
-        <activity android:name=".ActivatedApp.NotesActivityActivated" />
         <activity
             android:name=".ActivatedApp.MainActivityActivated"
             android:theme="@style/AppTheme" />
         <activity android:name=".ActivationRegistration" />
-        <activity android:name=".DemoApp.Main2ActivityDemo" />
-        <activity android:name=".DemoApp.MainActivityDemo" />
-        <activity android:name=".DemoApp.NotesActivityDemo" />
-        <activity android:name=".DemoApp.ProfileActivityDemo" />
+        <activity
+            android:name=".DemoApp.MainActivityDemo"
+            android:alwaysRetainTaskState="true"
+            android:exported="true" />
+        <activity android:name=".NotesActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".About" />
-        <activity android:name=".DemoApp.TopicReview" />
-        <activity android:name=".HowToUseApp" />
-        <activity android:name=".DemoApp.BasicOperations"></activity>
+        <activity android:name=".DemoApp.WelcomeSelectedDemo" />
+        <activity android:name=".DemoApp.DetExpSelectDemo" />
+        <activity android:name=".DemoApp.PastQuestionsDemo" />
+        <activity android:name=".ActivatedApp.DetExpSelectAc" />
+        <activity android:name=".ActivatedApp.PastQuestionsAc" />
+        <activity android:name=".ActivatedApp.WelcomeSelectedAc" />
+        <activity android:name=".DemoApp.TabsDemo"></activity>
+        <activity android:name=".ActivatedApp.TabsActivated"></activity>
+
     </application>
 
 </manifest>

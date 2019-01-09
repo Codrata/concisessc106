@@ -2,7 +2,10 @@ package com.codrata.concisessc_106.DemoApp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.codrata.concisessc_106.R;
 import com.github.barteksc.pdfviewer.PDFView;
@@ -14,31 +17,58 @@ import com.github.barteksc.pdfviewer.util.FitPolicy;
 
 public class MainActivityDemo extends AppCompatActivity {
 
-    public static final String SAMPLE_FILE = "ssc106way.pdf";
+
     private static final String TAG = MainActivityDemo.class.getSimpleName();
     Integer pageNumber = 0;
-    String pdfFileName;
+    String pdfFileName, SAMPLE_FILE;
     PDFView pdfView;
+    int result;
     private OnDrawListener onDrawListener;
     private OnLoadCompleteListener onLoadCompleteListener;
+    int currentPage;
     private OnPageChangeListener onPageChangeListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        SAMPLE_FILE = getIntent().getExtras().getString("SAMPLE_FILE");
+
+
+
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_main_demo);
 
-        PDFView pdfView = findViewById(R.id.pdfViewDemo);
+        final PDFView pdfView = findViewById(R.id.pdfViewDemo);
+        final EditText pageTo = findViewById(R.id.pageNumber);
+        final Button button = findViewById(R.id.goTo);
+
+        int currentNum = pdfView.getCurrentPage();
+
+        String currentPageCount = String.valueOf(currentNum);
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int pageNum = Integer.parseInt(pageTo.getText().toString());
+                pageNum = pageNum - 1;
+                pdfView.jumpTo(pageNum);
+            }
+        });
+
+
 
 
         pdfView.fromAsset(SAMPLE_FILE)
-                //.pages(0, 1, 2, 3)// limited to 3 pages for the Demo sample before Activation
+                .pages(0, 1, 2, 3, 4, 5, 6)// limited to 7 pages for the Demo sample before Activation
                 .enableSwipe(true) // allows to block changing pages using swipe
                 .swipeHorizontal(true)
+                .defaultPage(0)
                 .enableDoubletap(true)
                 .onPageChange(onPageChangeListener)
-                .defaultPage(0)
                 .scrollHandle(new DefaultScrollHandle(this))
                 .onDraw(onDrawListener)
                 // allows to draw something on all pages, separately for every page. Called only for visible pages

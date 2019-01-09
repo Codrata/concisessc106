@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
-import com.codrata.concisessc_106.DemoApp.Main2ActivityDemo;
-import com.codrata.concisessc_106.DemoApp.TopicReview;
+import com.codrata.concisessc_106.DemoApp.MainActivityDemo;
+import com.codrata.concisessc_106.DemoApp.TabsDemo;
 
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -46,7 +46,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     public void demoactivity(View view) {
         Intent i;
-        i = new Intent(WelcomeActivity.this, Main2ActivityDemo.class);
+        i = new Intent(WelcomeActivity.this, TabsDemo.class);
         startActivity(i);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
         return;
@@ -59,10 +59,22 @@ public class WelcomeActivity extends AppCompatActivity {
         return;
     }
 
+
+    public void openWecHowTo(View view) {
+        Intent intent = null;
+        Bundle extras = new Bundle();
+        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
+        extras.putString("SAMPLE_FILE", "gettingandactivatingtheapp.pdf");
+        intent.putExtras(extras);
+        startActivity(intent);
+    }
+
     public void openHowToUseTheApp(View view) {
-        Intent i = new Intent(getApplicationContext(), HowToUseApp.class);
-        startActivity(i);
-        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-        return;
+        Intent intent = null;
+        Bundle extras = new Bundle();
+        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
+        extras.putString("SAMPLE_FILE", "howtousetheapp.pdf");
+        intent.putExtras(extras);
+        startActivity(intent);
     }
 }

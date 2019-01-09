@@ -38,7 +38,7 @@ public class About extends AppCompatActivity {
                 .addItem(ownerElement)
                 .addItem(developerElement)
                 .addGroup("INFO AND SUPPORT")
-                .addEmail("elmehdi.sakout@gmail.com")
+                .addEmail("codratta@gmail.com")
                 //.addWebsite("http://medyo.github.io/")
                 .addFacebook("the.medy")
                 //.addTwitter("medyo80")

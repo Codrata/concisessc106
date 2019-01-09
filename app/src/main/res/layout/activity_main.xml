@@ -1,17 +1,41 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@android:color/black"
-    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     android:padding="20dp"
     tools:context=".ActivatedApp.MainActivityActivated">
 
 
     <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/pdfView"
+        android:id="@+id/pdfViewDemo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linearPageNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/pageNumber"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:hint=""
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/goTo"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:background="#94ff0000"
+            android:text="go"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

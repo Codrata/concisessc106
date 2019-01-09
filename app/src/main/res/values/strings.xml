@@ -9,4 +9,63 @@
     <string name="title_activity_notes">Notes</string>
     <string name="take_note">Take notes</string>
     <string name="copy_right" translatable="false">Copyrights © %1$d</string>
+    <string name="title_activity_pdf_viewer_demo">PdfViewerDemo</string>
+    <string name="welcome_ssc106">WELCOME</string>
+    <string name="detailed_explanatory">DETAILED EXPLANATORY TEXTBOOK</string>
+    <string name="concise_past_questions_and_solutions">CONCISE PAST QUESTIONS AND SOLUTIONS</string>
+    <string name="welcometothessc106">WELCOME TO THE SSC106 WAY</string>
+    <string name="getting_activating_app">GETTING AND ACTIVATING THE APP</string>
+    <string name="how_to_use_the_app">HOW TO USE THE SSC106 WAY</string>
+    <string name="topic_review">TOPIC REVIEW</string>
+    <string name="basic_operations_in_mathematics">BASIC OPERATIONS IN MATHEMATICS</string>
+    <string name="functions">FUNCTIONS</string>
+    <string name="matrices">MATRICES</string>
+    <string name="differentiation">DIFFERENTIATION</string>
+    <string name="partial_differentiation">PARTIAL DIFFERENTIATION</string>
+    <string name="applications_of_differential_equation">APPLICATIONS OF DIFFERENTIATION</string>
+    <string name="integration">INTEGRATION</string>
+    <string name="differential_equation">DIFFERENTIAL EQUATIONS</string>
+    <string name="application_calc_diff_e">APPLICATION OF CALCULUS TO ECONOMICS AND MANAGEMENT SCIENCES</string>
+    <string name="go_to">go to</string>
+    <string name="first_session">2001/2002 ACADEMIC SESSION</string>
+    <string name="second_session">2002/2003 ACADEMIC SESSION</string>
+    <string name="third_session">2003/2004 ACADEMIC SESSION</string>
+    <string name="fourth_session">2005/2006 ACADEMIC SESSION</string>
+    <string name="sixth_session">2007/2008 ACADEMIC SESSION</string>
+    <string name="seventh_session">2008/2009 ACADEMIC SESSION</string>
+    <string name="eight_session">2009/2010 ACADEMIC SESSION</string>
+    <string name="nineth_session">2010/2011 ACADEMIC SESSION</string>
+    <string name="tenth_session">2011/2012 ACADEMIC SESSION</string>
+    <string name="eleventh_session">2012/2013 ACADEMIC SESSION</string>
+    <string name="twelfth_session">2013/2014 ACADEMIC SESSION</string>
+    <string name="thirteenth_session">2014/2015 ACADEMIC SESSION</string>
+    <string name="fourteenth_session">2015/2016 ACADEMIC SESSION</string>
+    <string name="fifteenth_session">2016/2017 ACADEMIC SESSION</string>
+    <string name="sixteenth_session">MISCELLANEOUS PAST QUESTIONS (FROM TESTS)</string>
+    <string name="fourth_fifth_session">2006/2007 ACADEMIC SESSION</string>
+    <string name="introduce_to_ssc_106">Click here to be introduced to \n THE SSC 106 WAY</string>
+    <string name="read_and_understand_every_concept">Read and understand every concept \n \"on your own\" </string>
+    <string name="straightpq">A thorough journey through your exam past questions with straightforward solutions</string>
+    <string name="activate_to_access_full_content">ACTIVATE TO ACCESS FULL CONTENT</string>
+
+
+    <string-array name="drop_down2">
+        <item>CLICK HERE</item>
+        <item>1. FUNCTIONS</item>
+        <item>2. MATRICES</item>
+        <item>3. DIFFERENTIATION</item>
+        <item>4. PARTIAL DIFFERENTIATION</item>
+        <item>5. APPLICATIONS OF DIFFERENTIATION</item>
+        <item>6. INTEGRATION</item>
+        <item>7. DIFFERENTIAL EQUATIONS</item>
+        <item>8. APPLICATION OF CALCULUS TO ECONOMICS AND MANAGEMENT SCIENCES</item>
+        <item>9. MATHEMATICS IN ECONOMICS AND MANAGEMENT SCIENCES</item>
+
+    </string-array>
+    <string name="title_activity_with_nav_demo">activity_with_nav_demo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">SSC106</string>
+    <string name="nav_header_subtitle">STATUS: UNACTIVATED</string>
+    <string name="nav_header_desc">Navigation header</string>
 </resources>
