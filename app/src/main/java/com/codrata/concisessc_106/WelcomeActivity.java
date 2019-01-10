@@ -13,36 +13,15 @@ import com.codrata.concisessc_106.DemoApp.TabsDemo;
 
 
 public class WelcomeActivity extends AppCompatActivity {
-    ProgressBar loadingProgressBar;
-    LinearLayout linearLayout1;
-
-    Handler handler = new Handler();
-    Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            linearLayout1.setVisibility(View.VISIBLE);
-            loadingProgressBar.setVisibility(View.GONE); // hide progress bar after display
-        }
-    };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        linearLayout1 = findViewById(R.id.linearLayout1);
-        loadingProgressBar = findViewById(R.id.loadingProgressBar);
-        handler.postDelayed(runnable, 2000); //2000 is the timeout for the splash
 
 
     }
 
-    public void registrationactivity(View view) {
-        Intent i = new Intent(WelcomeActivity.this, ActivationRegistration.class);
-        startActivity(i);
-        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-        return;
-    }
 
     public void demoactivity(View view) {
         Intent i;
@@ -76,5 +55,12 @@ public class WelcomeActivity extends AppCompatActivity {
         extras.putString("SAMPLE_FILE", "howtousetheapp.pdf");
         intent.putExtras(extras);
         startActivity(intent);
+    }
+
+    public void ActivationActivity(View view) {
+        Intent i = new Intent(WelcomeActivity.this, ActivationActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+        return;
     }
 }

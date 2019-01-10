@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ActivationActivity">
 
-
     <android.support.v7.widget.CardView
         android:id="@+id/logincardview"
         android:layout_width="match_parent"
@@ -87,19 +86,18 @@
 
             </RelativeLayout>
 
-
             <RelativeLayout
-                android:id="@+id/relativeLayout3"
+                android:id="@+id/relativeLayout5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/relativeLayout2"
+                android:layout_below="@+id/relativeLayout1"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp">
 
 
                 <ImageView
-                    android:id="@+id/imgView_repasswordIcon"
+                    android:id="@+id/imgView_phoneIcon"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
@@ -108,14 +106,15 @@
                     android:tint="@color/white" />
 
                 <EditText
+                    android:id="@+id/edtcode1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/imgView_repasswordIcon"
+                    android:layout_alignBottom="@+id/imgView_phoneIcon"
                     android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/imgView_repasswordIcon"
+                    android:layout_toRightOf="@+id/imgView_phoneIcon"
                     android:background="@color/editTextBG"
-                    android:hint="Enter Licencse Key"
-                    android:inputType="textPassword"
+                    android:hint="Enter Activation Code"
+                    android:inputType="text"
                     android:paddingLeft="20dp"
                     android:textSize="15sp" />
 
@@ -125,7 +124,7 @@
                 android:id="@+id/relativeLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/relativeLayout3"
+                android:layout_below="@+id/relativeLayout1"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp">
@@ -136,7 +135,7 @@
                 android:id="@+id/chkBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/relativeLayout4"
+                android:layout_below="@id/relativeLayout5"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp"

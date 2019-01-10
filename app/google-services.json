@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "95519836160",
+    "firebase_url": "https://concise-ssc106.firebaseio.com",
+    "project_id": "concise-ssc106",
+    "storage_bucket": "concise-ssc106.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95519836160:android:f24392fcf4e0b884",
+        "android_client_info": {
+          "package_name": "com.codrata.concisessc_106"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95519836160-vvk6a2ri924n35luqcof02s9hfnb0h0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codrata.concisessc_106",
+            "certificate_hash": "d14adb2b5a4bad3f30fc56b0fc5810aa11ebc18c"
+          }
+        },
+        {
+          "client_id": "95519836160-3ivhbuqs8a43kre8u0qak3q11vahfvie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOnlRc6xEB60Inrp1Sx4_EH9hJB64x7q4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95519836160-3ivhbuqs8a43kre8u0qak3q11vahfvie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
