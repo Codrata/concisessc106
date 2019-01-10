@@ -8,9 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * Created by User on 2/28/2017.
- */
 
 public class Tab2Fragment extends Fragment {
     private static final String TAG = "com.codrata.concisessc_106.Tab2Fragment";

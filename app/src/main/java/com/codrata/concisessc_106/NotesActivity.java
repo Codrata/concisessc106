@@ -1,7 +1,6 @@
 package com.codrata.concisessc_106;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,17 +22,9 @@ public class NotesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab_2_demo_activity);
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab1);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Save("Note1.txt");
-            }
-        });
-
-        EditText1 = (EditText) findViewById(R.id.EditText1);
+        EditText EditText1 = findViewById(R.id.EditText1);
         EditText1.setText(Open("Note1.txt"));
+
     }
 
     @Override
@@ -96,5 +87,10 @@ public class NotesActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClickFab(View view) {
+
+        Save("Note1.txt");
     }
 }

@@ -4,17 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.codrata.concisessc_106.NotesActivity;
 import com.codrata.concisessc_106.R;
 import com.codrata.concisessc_106.SectionsPageAdapter;
 import com.codrata.concisessc_106.Tab1FragmentAc;
 import com.codrata.concisessc_106.Tab2Fragment;
 import com.codrata.concisessc_106.Tab3Fragment;
 
-public class TabsActivated extends AppCompatActivity {
+public class TabsActivated extends NotesActivity {
+
 
     private static final String TAG = "TabsActivated";
 
@@ -35,8 +36,10 @@ public class TabsActivated extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.containerAc);
         setupViewPager(mViewPager);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabsAc);
+
+        TabLayout tabLayout = findViewById(R.id.tabsAc);
         tabLayout.setupWithViewPager(mViewPager);
+
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -76,4 +79,11 @@ public class TabsActivated extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
+
+    public void onClickFab(View view) {
+
+        Save("Note1.txt");
+    }
+
+
 }
