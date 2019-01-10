@@ -34,7 +34,7 @@ public class ActivationActivity extends AppCompatActivity {
     }
     //int firebase
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    final DatabaseReference table_user = database.getReference("User");
+    //final DatabaseReference table_user = database.getReference("User");
     final DatabaseReference table_activationcode = database.getReference("ActivationCode");
 
     private void activateUser() {
@@ -52,7 +52,7 @@ public class ActivationActivity extends AppCompatActivity {
         }
 
 
-        if (Code.length() != 4) {
+        if (Code.length() != 7) {
             edtcode1.setError("Please Input A Valid Activation Code");
             edtcode1.requestFocus();
             mDialog.dismiss();
@@ -67,10 +67,15 @@ public class ActivationActivity extends AppCompatActivity {
                 if(dataSnapshot.child(edtcode1.getText().toString()).exists()) {
                     //get user information
                     mDialog.dismiss();
+                    //remove code from firebase
+                    String delete= edtcode1.getText().toString();
+                       table_activationcode.child(delete).removeValue();
+
                         Intent ActivatedIntent = new Intent(ActivationActivity.this, TabsActivated.class);
                         startActivity(ActivatedIntent);
                         finish();
                 }else{
+                    mDialog.dismiss();
                     Toast.makeText(ActivationActivity.this, "Invalid Activation Code !", Toast.LENGTH_SHORT).show();
                 }
             }
