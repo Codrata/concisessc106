@@ -23,28 +23,28 @@ public class About extends AppCompatActivity {
         Element adsElement = new Element();
         adsElement.setTitle("Advertise with us");
         Element releaseElement = new Element();
-        releaseElement.setTitle("Release Date:\t\tDecember 2018\n");
+        releaseElement.setTitle("Release Date:\t\tJanuary 2019\n");
         Element ownerElement = new Element();
         ownerElement.setTitle("Written by:\t\tGbadero T’Oluwalope\n");
         Element developerElement = new Element();
-        developerElement.setTitle("Developed by:\t\tCodrata\n");
+        developerElement.setTitle("Developed by:\t\tCodratta\n");
 
 
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
                 .setImage(R.drawable.img_ssc106)
                 .addItem(releaseElement)
-                .addItem(new Element().setTitle("Version 1.00.2018"))
+                .addItem(new Element().setTitle("Version 1.00.2019"))
                 .addItem(ownerElement)
                 .addItem(developerElement)
                 .addGroup("INFO AND SUPPORT")
-                .addEmail("codratta@gmail.com")
+                .addEmail("codrattainc@gmail.com")
                 //.addWebsite("http://medyo.github.io/")
                 .addFacebook("the.medy")
                 //.addTwitter("medyo80")
                 //.addYoutube("UCdPQtdWIsg7_pi4mrRu46vA")
                 //.addPlayStore("com.ideashower.readitlater.pro")
-                .addInstagram("medyo80")
+                //.addInstagram("medyo80")
                 //.addGitHub("medyo")
                 //.addItem(getCopyRightsElement())
                 .create();
