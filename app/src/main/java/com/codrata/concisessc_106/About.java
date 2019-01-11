@@ -23,11 +23,11 @@ public class About extends AppCompatActivity {
         Element adsElement = new Element();
         adsElement.setTitle("Advertise with us");
         Element releaseElement = new Element();
-        releaseElement.setTitle("Release Date:\t\tDecember 2018\n");
+        releaseElement.setTitle("Release Date:\t\tJanuary 2019\n");
         Element ownerElement = new Element();
         ownerElement.setTitle("Written by:\t\tGbadero T’Oluwalope\n");
         Element developerElement = new Element();
-        developerElement.setTitle("Developed by:\t\tcodrattainc@gmail.com\n");
+        developerElement.setTitle("Developed by:\t\tCodrata Inc\n");
 
 
         View aboutPage = new AboutPage(this)
@@ -35,13 +35,13 @@ public class About extends AppCompatActivity {
                 .setDescription(getString(R.string.about_the_app_way))
                 .setImage(R.drawable.img_ssc106)
                 .addItem(releaseElement)
-                .addItem(new Element().setTitle("Version 1.00.2018"))
+                .addItem(new Element().setTitle("Version 1.00.2019"))
                 .addItem(ownerElement)
                 .addItem(developerElement)
                 .addGroup("INFO AND SUPPORT")
                 .addEmail("codrattainc@gmail.com")
-                .addFacebook("the.medy")
-                .addInstagram("medyo80")
+                .addGroup("Chat us on Whatsapp")
+                .addWebsite("https://api.whatsapp.com/send?phone=2347037525528")
                 .create();
 
         setContentView(aboutPage);
