@@ -27,26 +27,21 @@ public class About extends AppCompatActivity {
         Element ownerElement = new Element();
         ownerElement.setTitle("Written by:\t\tGbadero T’Oluwalope\n");
         Element developerElement = new Element();
-        developerElement.setTitle("Developed by:\t\tCodrata\n");
+        developerElement.setTitle("Developed by:\t\tcodrattainc@gmail.com\n");
 
 
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
+                .setDescription(getString(R.string.about_the_app_way))
                 .setImage(R.drawable.img_ssc106)
                 .addItem(releaseElement)
                 .addItem(new Element().setTitle("Version 1.00.2018"))
                 .addItem(ownerElement)
                 .addItem(developerElement)
                 .addGroup("INFO AND SUPPORT")
-                .addEmail("codratta@gmail.com")
-                //.addWebsite("http://medyo.github.io/")
+                .addEmail("codrattainc@gmail.com")
                 .addFacebook("the.medy")
-                //.addTwitter("medyo80")
-                //.addYoutube("UCdPQtdWIsg7_pi4mrRu46vA")
-                //.addPlayStore("com.ideashower.readitlater.pro")
                 .addInstagram("medyo80")
-                //.addGitHub("medyo")
-                //.addItem(getCopyRightsElement())
                 .create();
 
         setContentView(aboutPage);
