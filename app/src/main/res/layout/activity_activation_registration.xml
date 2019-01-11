@@ -34,7 +34,9 @@
             android:layout_height="300dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/img_ssc106" />
+            android:src="@drawable/img_ssc106" />
+
+
 
 </RelativeLayout>
 
@@ -48,7 +50,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         app:cardCornerRadius="10dp"
-        android:visibility="gone"
+
         app:cardElevation="3dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true">
@@ -71,7 +73,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/circle"
                     android:padding="10dp"
-                    android:src="@drawable/ic_library_books_black_24dp"
+                    android:src="@drawable/img_register"
                     android:tint="@color/white" />
 
                 <TextView

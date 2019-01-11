@@ -1,9 +1,13 @@
 package com.codrata.concisessc_106;
 
+import android.Manifest;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -21,7 +25,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ActivationActivity extends AppCompatActivity {
     EditText edtcode1;
-
+    //SharedPreferences sharedpreferences;
+    //String Activated = sharedpreferences.getString("ACTIVATED", "");
 
 
     @Override
@@ -29,6 +34,8 @@ public class ActivationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activation);
         edtcode1 = (EditText) findViewById(R.id.edtcode1);
+        //sharedpreferences = getSharedPreferences("ACTIVATED", Context.MODE_PRIVATE);
+
 
 
     }
@@ -70,6 +77,10 @@ public class ActivationActivity extends AppCompatActivity {
                     //remove code from firebase
                     String delete= edtcode1.getText().toString();
                        table_activationcode.child(delete).removeValue();
+                       // store user data
+                        //SharedPreferences.Editor editor = sharedpreferences.edit();
+                        //editor.putString("ACTIVATED", delete);
+                        //editor.apply();
 
                         Intent ActivatedIntent = new Intent(ActivationActivity.this, TabsActivated.class);
                         startActivity(ActivatedIntent);
@@ -86,7 +97,19 @@ public class ActivationActivity extends AppCompatActivity {
             }
         });
     }
-
+   /* @Override
+    protected void onStart() {
+        super.onStart();
+        if (Activated.equals("ACTIVATED")){
+            //handle the already login user
+            Intent i = new Intent(ActivationActivity.this, TabsActivated.class);
+            startActivity(i);
+            //overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+        } else {
+            Intent i = new Intent(ActivationActivity.this, ActivationActivity.class);
+            startActivity(i);
+        }
+    }*/
     public void main2Activity(View view) {
         activateUser();
         overridePendingTransition(R.anim.slideinleft, R.anim.slideoutright);

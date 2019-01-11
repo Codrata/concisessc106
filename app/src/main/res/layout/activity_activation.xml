@@ -39,7 +39,7 @@
                     android:background="@drawable/circle"
                     android:padding="10dp"
                     android:tint="@color/white"
-                    app:srcCompat="@drawable/ic_library_books_black_24dp" />
+                    app:srcCompat="@drawable/img_activateapp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -131,45 +131,20 @@
 
             </RelativeLayout>
 
-            <CheckBox
-                android:id="@+id/chkBox1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/relativeLayout5"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="30dp"
-                android:fontFamily="sans-serif"
-                android:text="Remember Me"
-                android:textColor="@color/textColor" />
-
             <Button
                 android:id="@+id/btn_Login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/chkBox1"
+                android:layout_below="@+id/relativeLayout5"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="40dp"
                 android:layout_marginRight="30dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="sans-serif-medium"
                 android:text="Activate"
                 android:onClick="main2Activity"
                 android:textColor="@color/white" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_Login"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:background="@color/transparent"
-                android:fontFamily="sans-serif"
-                android:text="Dont have Activation Key? Sign Up"
-                android:textAllCaps="false"
-                android:textColor="@color/textColor"
-                android:textSize="13sp" />
 
         </RelativeLayout>
 

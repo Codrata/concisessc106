@@ -7,18 +7,16 @@ public class User {
     private String Phone;
     private String Pin;
     private String Department;
-    private String  Activation;
 
     public User() {
     }
 
-    public User(String name, String email, String phone, String pin, String department, String activation) {
+    public User(String name, String email, String phone, String pin, String department) {
         Name = name;
         Email = email;
         Phone = phone;
         Pin = pin;
         Department = department;
-        Activation = activation;
     }
 
     public String getName() {
@@ -61,11 +59,4 @@ public class User {
         Department = department;
     }
 
-    public String getActivation() {
-        return Activation;
-    }
-
-    public void setActivation(String activation) {
-        Activation = activation;
-    }
 }

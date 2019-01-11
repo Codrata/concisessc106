@@ -64,8 +64,7 @@ public class ActivationRegistration extends AppCompatActivity {
 
     EditText edtname, edtemail, edtphone, edtpin, edtdepartment;
     TextView actvkey;
-    TelephonyManager tm;
-    String IMEI;
+    CheckBox chkBox1;
 
 
     @Override
@@ -78,12 +77,6 @@ public class ActivationRegistration extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        // chek if phone permission is granted
-        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE);
-        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
-        } else {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, PERMISSION_READ_STATE);
-        }
         //
         rellay1 = findViewById(R.id.rellay1);
         loadingProgressBar = findViewById(R.id.loadingProgressBar);
@@ -95,26 +88,8 @@ public class ActivationRegistration extends AppCompatActivity {
         edtphone = (EditText) findViewById(R.id.edtphone);
         edtpin = (EditText) findViewById(R.id.edtpin);
         edtdepartment = (EditText) findViewById(R.id.edtdepartment);
+        chkBox1 = (CheckBox) findViewById(R.id.chkBox1);
 
-        //Generate IMEI no
-        actvkey = (TextView) findViewById(R.id.actvkey);
-        tm = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        IMEI = tm.getDeviceId();
-        // Revesrs IMEI
-        StringBuffer buffer = new StringBuffer(IMEI);
-        buffer.reverse();
-
-        actvkey.setText(buffer);
 
     }
 
@@ -202,6 +177,12 @@ public class ActivationRegistration extends AppCompatActivity {
             return;
         }
 
+        if (!chkBox1.isChecked()) {
+            Toast.makeText(ActivationRegistration.this, "Please Accept Terms and Condition", Toast.LENGTH_LONG).show();
+            mDialog.dismiss();
+            return;
+        }
+
         mDialog.show();
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -210,7 +191,7 @@ public class ActivationRegistration extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
 
-                            User user = new User(edtname.getText().toString(),edtemail.getText().toString(),edtphone.getText().toString(),edtpin.getText().toString(),edtdepartment.getText().toString(),actvkey.getText().toString());
+                            User user = new User(edtname.getText().toString(),edtemail.getText().toString(),edtphone.getText().toString(),edtpin.getText().toString(),edtdepartment.getText().toString());
                             //table_user.child(edtphone.getText().toString()).setValue(user);
 
                             FirebaseDatabase.getInstance().getReference("User")
