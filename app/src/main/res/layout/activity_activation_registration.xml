@@ -192,7 +192,7 @@
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
                     android:padding="8dp"
-                    android:src="@drawable/ic_local_phone_black_24dp"
+                    app:srcCompat="@drawable/ic_local_phone_black_24dp"
                     android:tint="@color/white" />
 
                 <EditText
@@ -220,27 +220,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp">
 
-                <ImageView
-                    android:id="@+id/imgView_passwordIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@color/colorPrimary"
-                    android:padding="8dp"
-                    android:src="@drawable/img_authentication"
-                    android:tint="@color/white" />
 
-                <EditText
-                    android:id="@+id/edtpin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/imgView_passwordIcon"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/imgView_passwordIcon"
-                    android:background="@color/editTextBG"
-                    android:hint="Pin"
-                    android:inputType="numberPassword"
-                    android:paddingLeft="20dp"
-                    android:textSize="15sp" />
 
 
             </RelativeLayout>

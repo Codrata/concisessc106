@@ -1,49 +1,31 @@
 package com.codrata.concisessc_106;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-
-import com.codrata.concisessc_106.ActivatedApp.TabsActivated;
-import com.codrata.concisessc_106.DemoApp.TabsDemo;
-import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import com.codrata.concisessc_106.DemoApp.TabsDemo;
 import com.codrata.concisessc_106.Model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
+import static com.codrata.concisessc_106.ActivationActivity.PREFS_NAME;
 
 public class ActivationRegistration extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -83,12 +65,11 @@ public class ActivationRegistration extends AppCompatActivity {
         //chkbox1 = (CheckBox) findViewById(R.id.chkbox1);
         handler.postDelayed(runnable, 2000); //2000 is the timeout for the splash
 
-        edtname = (EditText) findViewById(R.id.edtname);
-        edtemail = (EditText) findViewById(R.id.edtemail);
-        edtphone = (EditText) findViewById(R.id.edtphone);
-        edtpin = (EditText) findViewById(R.id.edtpin);
-        edtdepartment = (EditText) findViewById(R.id.edtdepartment);
-        chkBox1 = (CheckBox) findViewById(R.id.chkBox1);
+        edtname = findViewById(R.id.edtname);
+        edtemail = findViewById(R.id.edtemail);
+        edtphone = findViewById(R.id.edtphone);
+        edtdepartment = findViewById(R.id.edtdepartment);
+        chkBox1 = findViewById(R.id.chkBox1);
 
 
     }
@@ -221,6 +202,23 @@ public class ActivationRegistration extends AppCompatActivity {
 
 
     public void WelcomeActivity(View view) {
+
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = preferences.edit();
+
+        EditText editemail = findViewById(R.id.edtemail);
+        EditText editName = findViewById(R.id.edtname);
+        EditText editDept = findViewById(R.id.edtdepartment);
+
+        String dpName = editName.getText().toString();
+        String dpDept = editDept.getText().toString();
+        String dpEmail = editemail.getText().toString();
+
+
+        editor.putString("EMAIL", dpEmail);
+        editor.putString("NAME", dpName);
+        editor.putString("DEPT", dpDept);
+
         registerUser();
     }
 

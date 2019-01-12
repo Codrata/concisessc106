@@ -7,13 +7,17 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
+import com.codrata.concisessc_106.About;
 import com.codrata.concisessc_106.NotesActivity;
 import com.codrata.concisessc_106.R;
 import com.codrata.concisessc_106.SectionsPageAdapter;
 import com.codrata.concisessc_106.Tab1FragmentAc;
 import com.codrata.concisessc_106.Tab2Fragment;
 import com.codrata.concisessc_106.Tab3Fragment;
+
+import static com.codrata.concisessc_106.ActivationActivity.PREFS_NAME;
 
 public class TabsActivated extends NotesActivity {
 
@@ -23,18 +27,31 @@ public class TabsActivated extends NotesActivity {
     private SectionsPageAdapter mSectionsPageAdapter;
 
     private ViewPager mViewPager;
+    TextView dpLicense, dpEmail, dpDept, dpName;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (!isTaskRoot()
-                && getIntent().hasCategory(Intent.CATEGORY_LAUNCHER)
-                && getIntent().getAction() != null
-                && getIntent().getAction().equals(Intent.ACTION_MAIN)) {
 
-            finish();
-            return;
-        }
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, 0);
+        String licenseKey = prefs.getString("LICENSE_KEY", "");
+        String dispEmail = prefs.getString("EMAIL", "");
+        String dispDept = prefs.getString("DEPT", "");
+        String dispName = prefs.getString("DEPT", "");
+
+
+        dpLicense = findViewById(R.id.licenseCode);
+        dpEmail = findViewById(R.id.emailname);
+        dpDept = findViewById(R.id.dept_view);
+        dpName = findViewById(R.id.name);
+
+        dpLicense.setText(licenseKey);
+        dpEmail.setText(dispEmail);
+        dpEmail.setText(dispDept);
+        dpName.setText(dispName);
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs_ac);
         Log.d(TAG, "onCreate: Starting.");
@@ -51,15 +68,6 @@ public class TabsActivated extends NotesActivity {
 
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        SharedPreferences prefs = getSharedPreferences("X", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("lastActivity", getClass().getName());
-        editor.commit();
-    }
 
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
@@ -105,4 +113,12 @@ public class TabsActivated extends NotesActivity {
     }
 
 
+    public void aboutactivity(View view) {
+
+        Intent i = new Intent(getApplicationContext(), About.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.slideindown, R.anim.zoomout);
+        return;
+
+    }
 }

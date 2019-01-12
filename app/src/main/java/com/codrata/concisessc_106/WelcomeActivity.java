@@ -1,22 +1,33 @@
 package com.codrata.concisessc_106;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.codrata.concisessc_106.ActivatedApp.TabsActivated;
 import com.codrata.concisessc_106.DemoApp.MainActivityDemo;
 import com.codrata.concisessc_106.DemoApp.TabsDemo;
+
+import static com.codrata.concisessc_106.ActivationActivity.KEY_FIRST_TIME;
+import static com.codrata.concisessc_106.ActivationActivity.PREFS_NAME;
 
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    public static final String PREFS_NAME = "MyPrefsFile";
-    public static final String KEY_FIRST_TIME = "firstTime";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, 0);
+        boolean firstTime = prefs.getBoolean(KEY_FIRST_TIME, false);
+
+        if (firstTime) {
+            Intent sendToSetup = new Intent(this, TabsActivated.class);
+            startActivity(sendToSetup);
+            finish();
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);

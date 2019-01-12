@@ -33,7 +33,6 @@
             android:alwaysRetainTaskState="true"
             android:exported="true" />
         <activity android:name=".NotesActivity" />
-        <activity android:name=".ProfileActivity" />
         <activity android:name=".About" />
         <activity android:name=".DemoApp.WelcomeSelectedDemo" />
         <activity android:name=".DemoApp.DetExpSelectDemo" />

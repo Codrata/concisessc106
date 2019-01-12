@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class ActivationActivity extends AppCompatActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
     public static final String KEY_FIRST_TIME = "firstTime";
-    EditText edtcode1;
+    EditText edtcode1, editEmail, editName;
     //SharedPreferences sharedpreferences;
     //String Activated = sharedpreferences.getString("ACTIVATED", "");
 
@@ -74,12 +74,7 @@ public class ActivationActivity extends AppCompatActivity {
                     String delete= edtcode1.getText().toString();
                        table_activationcode.child(delete).removeValue();
                        // store user data
-                    SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
-                    SharedPreferences.Editor editor = preferences.edit();
 
-                    //Save values from Edit Text Controls
-                    editor.putBoolean(KEY_FIRST_TIME, true);
-                    editor.commit();
 
                         Intent ActivatedIntent = new Intent(ActivationActivity.this, TabsActivated.class);
                     ActivatedIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
@@ -111,6 +106,19 @@ public class ActivationActivity extends AppCompatActivity {
         }
     }*/
     public void main2Activity(View view) {
+
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = preferences.edit();
+
+        EditText editLicense = findViewById(R.id.edtcode1);
+
+        String licensekey = editLicense.getText().toString();
+
+        editor.putBoolean(KEY_FIRST_TIME, true);
+
+        editor.putString("LICENSE_KEY", licensekey);
+
+        editor.commit();
         activateUser();
         overridePendingTransition(R.anim.slideinleft, R.anim.slideoutright);
         return;
