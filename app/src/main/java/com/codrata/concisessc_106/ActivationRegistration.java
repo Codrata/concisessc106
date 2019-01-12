@@ -1,49 +1,31 @@
 package com.codrata.concisessc_106;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-
-import com.codrata.concisessc_106.ActivatedApp.TabsActivated;
-import com.codrata.concisessc_106.DemoApp.TabsDemo;
-import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import com.codrata.concisessc_106.DemoApp.TabsDemo;
 import com.codrata.concisessc_106.Model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
+import static com.codrata.concisessc_106.ActivationActivity.PREFS_NAME;
 
 public class ActivationRegistration extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -83,12 +65,11 @@ public class ActivationRegistration extends AppCompatActivity {
         //chkbox1 = (CheckBox) findViewById(R.id.chkbox1);
         handler.postDelayed(runnable, 2000); //2000 is the timeout for the splash
 
-        edtname = (EditText) findViewById(R.id.edtname);
-        edtemail = (EditText) findViewById(R.id.edtemail);
-        edtphone = (EditText) findViewById(R.id.edtphone);
-        edtpin = (EditText) findViewById(R.id.edtpin);
-        edtdepartment = (EditText) findViewById(R.id.edtdepartment);
-        chkBox1 = (CheckBox) findViewById(R.id.chkBox1);
+        edtname = findViewById(R.id.edtname);
+        edtemail = findViewById(R.id.edtemail);
+        edtphone = findViewById(R.id.edtphone);
+        edtdepartment = findViewById(R.id.edtdepartment);
+        chkBox1 = findViewById(R.id.chkBox1);
 
 
     }
@@ -113,9 +94,14 @@ public class ActivationRegistration extends AppCompatActivity {
     private void registerUser() {
         final String name = edtname.getText().toString().trim();
         final String email = edtemail.getText().toString().trim();
-        final String password = edtpin.getText().toString().trim();
-        final String phone = edtphone.getText().toString().trim();
+        final String password = edtphone.getText().toString().trim();
         final String department = edtdepartment.getText().toString().trim();
+
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("EMAIL", email);
+        editor.putString("NAME", name);
+        editor.putString("DEPT", department);
 
         final ProgressDialog mDialog = new ProgressDialog(ActivationRegistration.this);
         mDialog.setMessage("Activating.....");
@@ -134,14 +120,9 @@ public class ActivationRegistration extends AppCompatActivity {
             mDialog.dismiss();
             return;
         }
-        if (password.isEmpty()) {
-            edtpin.setError("Pin is Required");
-            edtpin.requestFocus();
-            mDialog.dismiss();
-            return;
-        }
 
-        if (phone.isEmpty()) {
+
+        if (password.isEmpty()) {
             edtphone.setError("Phone Number is Required");
             edtphone.requestFocus();
             mDialog.dismiss();
@@ -162,15 +143,7 @@ public class ActivationRegistration extends AppCompatActivity {
         }
 
 
-        if (password.length() < 6) {
-            edtpin.setError("Password must be Greater than 5");
-            edtpin.requestFocus();
-            mDialog.dismiss();
-            return;
-        }
-
-
-        if (phone.length() != 11) {
+        if (password.length() != 11) {
             edtphone.setError("Please Input A Valid No");
             edtphone.requestFocus();
             mDialog.dismiss();
@@ -191,7 +164,7 @@ public class ActivationRegistration extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
 
-                            User user = new User(edtname.getText().toString(),edtemail.getText().toString(),edtphone.getText().toString(),edtpin.getText().toString(),edtdepartment.getText().toString());
+                            User user = new User(edtname.getText().toString(), edtemail.getText().toString(), edtphone.getText().toString(), edtdepartment.getText().toString());
                             //table_user.child(edtphone.getText().toString()).setValue(user);
 
                             FirebaseDatabase.getInstance().getReference("User")
@@ -204,6 +177,7 @@ public class ActivationRegistration extends AppCompatActivity {
                                         Toast.makeText(ActivationRegistration.this, "Registration Succesful", Toast.LENGTH_LONG).show();
                                         Intent i = new Intent(ActivationRegistration.this, WelcomeActivity.class);
                                         startActivity(i);
+                                        finish();
                                     } else {
                                         //display a failure message
                                     }
@@ -221,6 +195,9 @@ public class ActivationRegistration extends AppCompatActivity {
 
 
     public void WelcomeActivity(View view) {
+
+
+
         registerUser();
     }
 

@@ -9,7 +9,6 @@ import com.codrata.concisessc_106.ActivatedApp.MainActivityActivated;
 import com.codrata.concisessc_106.R;
 
 public class WelcomeSelectedDemo extends AppCompatActivity {
-    String INTENT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +16,11 @@ public class WelcomeSelectedDemo extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_selected);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
     public void openFirstItem(View view) {
@@ -83,6 +87,12 @@ public class WelcomeSelectedDemo extends AppCompatActivity {
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+
+    }
+
+    public void OnbackPressed() {
+
+        super.onBackPressed();
 
     }
 }

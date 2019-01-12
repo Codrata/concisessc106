@@ -11,6 +11,11 @@ import com.codrata.concisessc_106.R;
 public class WelcomeSelectedAc extends AppCompatActivity {
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_selected_ac);

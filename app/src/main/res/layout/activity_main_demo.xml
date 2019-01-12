@@ -23,9 +23,9 @@
 
         <EditText
             android:id="@+id/pageNumber"
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:hint=""
+            android:maxLength="3"
             android:inputType="number" />
 
         <Button

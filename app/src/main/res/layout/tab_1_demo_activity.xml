@@ -38,6 +38,9 @@
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openWelcomeItemDemo"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />
@@ -83,6 +86,9 @@
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openDetExpDemo"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />
@@ -138,6 +144,9 @@
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openConPQDemo"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />

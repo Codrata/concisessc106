@@ -9,35 +9,41 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:weightSum="3"
         android:background="@android:color/white"
         android:orientation="vertical"
         android:padding="20dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:gravity="center"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <android.support.v7.widget.CardView
                 android:layout_width="160dp"
                 android:layout_height="300dp"
                 android:layout_margin="10dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:onClick="openWelcomeItemAc">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="openWelcomeItemAc"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openWelcomeItemAc"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />
@@ -75,14 +81,20 @@
                 android:onClick="openDetExpAc">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="openDetExpAc"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openDetExpAc"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />
@@ -114,14 +126,15 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal">
 
             <android.support.v7.widget.CardView
-                android:layout_width="340dp"
+                android:layout_width="wrap_content"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 android:clickable="true"
@@ -130,14 +143,20 @@
                 android:onClick="openConPQAc">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="openConPQAc"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openConPQAc"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />
@@ -167,6 +186,16 @@
 
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:onClick="aboutactivity"
+            android:text="About App?"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
 
 
     </LinearLayout>

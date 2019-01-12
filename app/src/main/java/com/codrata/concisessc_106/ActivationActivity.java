@@ -1,22 +1,16 @@
 package com.codrata.concisessc_106;
 
-import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codrata.concisessc_106.ActivatedApp.TabsActivated;
-import com.codrata.concisessc_106.Model.ActivationCode;
-import com.codrata.concisessc_106.Model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +18,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class ActivationActivity extends AppCompatActivity {
-    EditText edtcode1;
+    public static final String PREFS_NAME = "MyPrefsFile";
+    public static final String KEY_FIRST_TIME = "firstTime";
+    EditText edtcode1, editEmail, editName;
     //SharedPreferences sharedpreferences;
     //String Activated = sharedpreferences.getString("ACTIVATED", "");
 
@@ -33,12 +29,12 @@ public class ActivationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activation);
-        edtcode1 = (EditText) findViewById(R.id.edtcode1);
+        edtcode1 = findViewById(R.id.edtcode1);
         //sharedpreferences = getSharedPreferences("ACTIVATED", Context.MODE_PRIVATE);
 
-
-
     }
+
+
     //int firebase
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     //final DatabaseReference table_user = database.getReference("User");
@@ -78,16 +74,17 @@ public class ActivationActivity extends AppCompatActivity {
                     String delete= edtcode1.getText().toString();
                        table_activationcode.child(delete).removeValue();
                        // store user data
-                        //SharedPreferences.Editor editor = sharedpreferences.edit();
-                        //editor.putString("ACTIVATED", delete);
-                        //editor.apply();
+
 
                         Intent ActivatedIntent = new Intent(ActivationActivity.this, TabsActivated.class);
+                    ActivatedIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
                         startActivity(ActivatedIntent);
-                        finish();
+                    ActivationActivity.this.finish();
+
                 }else{
-                    mDialog.dismiss();
                     Toast.makeText(ActivationActivity.this, "Invalid Activation Code !", Toast.LENGTH_SHORT).show();
+                    mDialog.dismiss();
+
                 }
             }
 
@@ -111,8 +108,22 @@ public class ActivationActivity extends AppCompatActivity {
         }
     }*/
     public void main2Activity(View view) {
+
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = preferences.edit();
+
+        EditText editLicense = findViewById(R.id.edtcode1);
+
+        String licensekey = editLicense.getText().toString();
+
+        editor.putBoolean(KEY_FIRST_TIME, true);
+
+        editor.putString("LICENSE_KEY", licensekey);
+
+        editor.commit();
         activateUser();
         overridePendingTransition(R.anim.slideinleft, R.anim.slideoutright);
         return;
     }
+
 }

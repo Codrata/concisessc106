@@ -6,13 +6,14 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
+import com.codrata.concisessc_106.About;
 import com.codrata.concisessc_106.NotesActivity;
 import com.codrata.concisessc_106.R;
 import com.codrata.concisessc_106.SectionsPageAdapter;
 import com.codrata.concisessc_106.Tab1FragmentAc;
 import com.codrata.concisessc_106.Tab2Fragment;
-import com.codrata.concisessc_106.Tab3Fragment;
 
 public class TabsActivated extends NotesActivity {
 
@@ -22,10 +23,21 @@ public class TabsActivated extends NotesActivity {
     private SectionsPageAdapter mSectionsPageAdapter;
 
     private ViewPager mViewPager;
+    TextView dpLicense, dpEmail, dpDept, dpName;
+
+    @Override
+    public void onBackPressed() {
+        Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+        homeIntent.addCategory(Intent.CATEGORY_HOME);
+        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(homeIntent);
+    }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs_ac);
         Log.d(TAG, "onCreate: Starting.");
@@ -33,7 +45,7 @@ public class TabsActivated extends NotesActivity {
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.containerAc);
+        mViewPager = findViewById(R.id.containerAc);
         setupViewPager(mViewPager);
 
 
@@ -42,22 +54,24 @@ public class TabsActivated extends NotesActivity {
 
     }
 
+
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new Tab1FragmentAc(), "ACTIVATED");
         adapter.addFragment(new Tab2Fragment(), "NOTES");
-        adapter.addFragment(new Tab3Fragment(), "PROFILE");
         viewPager.setAdapter(adapter);
     }
 
     public void openWelcomeItemAc(View view) {
+        Intent intent = null;
 
         Bundle extras = new Bundle();
 
-        Intent intent = new Intent(getApplicationContext(), WelcomeSelectedAc.class);
+        intent = new Intent(TabsActivated.this, WelcomeSelectedAc.class);
         startActivity(intent);
         intent.putExtras(extras);
         startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
     public void openDetExpAc(View view) {
@@ -86,4 +100,12 @@ public class TabsActivated extends NotesActivity {
     }
 
 
+    public void aboutactivity(View view) {
+
+        Intent i = new Intent(getApplicationContext(), About.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.slideindown, R.anim.zoomout);
+        return;
+
+    }
 }
