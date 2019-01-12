@@ -98,6 +98,12 @@ public class ActivationRegistration extends AppCompatActivity {
         final String phone = edtphone.getText().toString().trim();
         final String department = edtdepartment.getText().toString().trim();
 
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("EMAIL", email);
+        editor.putString("NAME", name);
+        editor.putString("DEPT", department);
+
         final ProgressDialog mDialog = new ProgressDialog(ActivationRegistration.this);
         mDialog.setMessage("Activating.....");
         mDialog.show();
@@ -203,21 +209,7 @@ public class ActivationRegistration extends AppCompatActivity {
 
     public void WelcomeActivity(View view) {
 
-        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = preferences.edit();
 
-        EditText editemail = findViewById(R.id.edtemail);
-        EditText editName = findViewById(R.id.edtname);
-        EditText editDept = findViewById(R.id.edtdepartment);
-
-        String dpName = editName.getText().toString();
-        String dpDept = editDept.getText().toString();
-        String dpEmail = editemail.getText().toString();
-
-
-        editor.putString("EMAIL", dpEmail);
-        editor.putString("NAME", dpName);
-        editor.putString("DEPT", dpDept);
 
         registerUser();
     }
