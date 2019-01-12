@@ -41,8 +41,8 @@
         <activity android:name=".ActivatedApp.DetExpSelectAc" />
         <activity android:name=".ActivatedApp.PastQuestionsAc" />
         <activity android:name=".ActivatedApp.WelcomeSelectedAc" />
-        <activity android:name=".DemoApp.TabsDemo"></activity>
-        <activity android:name=".ActivatedApp.TabsActivated"></activity>
+        <activity android:name=".DemoApp.TabsDemo" />
+        <activity android:name=".ActivatedApp.TabsActivated" />
 
     </application>
 

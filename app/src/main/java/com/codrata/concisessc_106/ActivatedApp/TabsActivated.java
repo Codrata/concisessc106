@@ -1,6 +1,7 @@
 package com.codrata.concisessc_106.ActivatedApp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -26,6 +27,14 @@ public class TabsActivated extends NotesActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (!isTaskRoot()
+                && getIntent().hasCategory(Intent.CATEGORY_LAUNCHER)
+                && getIntent().getAction() != null
+                && getIntent().getAction().equals(Intent.ACTION_MAIN)) {
+
+            finish();
+            return;
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs_ac);
         Log.d(TAG, "onCreate: Starting.");
@@ -33,13 +42,23 @@ public class TabsActivated extends NotesActivity {
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.containerAc);
+        mViewPager = findViewById(R.id.containerAc);
         setupViewPager(mViewPager);
 
 
         TabLayout tabLayout = findViewById(R.id.tabsAc);
         tabLayout.setupWithViewPager(mViewPager);
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences prefs = getSharedPreferences("X", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("lastActivity", getClass().getName());
+        editor.commit();
     }
 
     private void setupViewPager(ViewPager viewPager) {

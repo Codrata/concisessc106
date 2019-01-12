@@ -2,11 +2,8 @@ package com.codrata.concisessc_106;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 
 import com.codrata.concisessc_106.DemoApp.MainActivityDemo;
 import com.codrata.concisessc_106.DemoApp.TabsDemo;
@@ -14,8 +11,13 @@ import com.codrata.concisessc_106.DemoApp.TabsDemo;
 
 public class WelcomeActivity extends AppCompatActivity {
 
+    public static final String PREFS_NAME = "MyPrefsFile";
+    public static final String KEY_FIRST_TIME = "firstTime";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 

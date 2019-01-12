@@ -12,7 +12,6 @@ import com.codrata.concisessc_106.R;
 import com.codrata.concisessc_106.SectionsPageAdapter;
 import com.codrata.concisessc_106.Tab1Fragment;
 import com.codrata.concisessc_106.Tab2Fragment;
-import com.codrata.concisessc_106.Tab3Fragment;
 
 public class TabsDemo extends AppCompatActivity {
 
@@ -32,10 +31,10 @@ public class TabsDemo extends AppCompatActivity {
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         setupViewPager(mViewPager);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
     }
 
@@ -43,7 +42,6 @@ public class TabsDemo extends AppCompatActivity {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new Tab1Fragment(), "DEMO");
         adapter.addFragment(new Tab2Fragment(), "NOTES");
-        adapter.addFragment(new Tab3Fragment(), "PROFILE");
         viewPager.setAdapter(adapter);
     }
 
