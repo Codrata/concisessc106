@@ -80,9 +80,11 @@ public class ActivationActivity extends AppCompatActivity {
                     ActivatedIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
                         startActivity(ActivatedIntent);
                     ActivationActivity.this.finish();
+
                 }else{
-                    mDialog.dismiss();
                     Toast.makeText(ActivationActivity.this, "Invalid Activation Code !", Toast.LENGTH_SHORT).show();
+                    mDialog.dismiss();
+
                 }
             }
 

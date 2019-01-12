@@ -18,6 +18,11 @@ public class WelcomeSelectedDemo extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_selected);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     public void openFirstItem(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();

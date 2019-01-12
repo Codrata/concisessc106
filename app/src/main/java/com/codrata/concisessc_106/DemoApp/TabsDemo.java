@@ -23,13 +23,6 @@ public class TabsDemo extends AppCompatActivity {
 
 
     @Override
-    public void onBackPressed() {
-        finish();
-        super.onBackPressed();
-    }
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs_demo);
@@ -53,13 +46,15 @@ public class TabsDemo extends AppCompatActivity {
     }
 
     public void openWelcomeItemDemo(View view) {
+        Intent intent = null;
 
         Bundle extras = new Bundle();
 
-        Intent intent = new Intent(getApplicationContext(), WelcomeSelectedDemo.class);
+        intent = new Intent(TabsDemo.this, WelcomeSelectedDemo.class);
         startActivity(intent);
         intent.putExtras(extras);
         startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
     public void openDetExpDemo(View view) {

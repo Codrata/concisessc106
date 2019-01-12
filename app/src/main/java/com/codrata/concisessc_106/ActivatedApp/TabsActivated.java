@@ -27,8 +27,10 @@ public class TabsActivated extends NotesActivity {
 
     @Override
     public void onBackPressed() {
-        finish();
-        super.onBackPressed();
+        Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+        homeIntent.addCategory(Intent.CATEGORY_HOME);
+        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(homeIntent);
     }
 
 
@@ -61,13 +63,15 @@ public class TabsActivated extends NotesActivity {
     }
 
     public void openWelcomeItemAc(View view) {
+        Intent intent = null;
 
         Bundle extras = new Bundle();
 
-        Intent intent = new Intent(getApplicationContext(), WelcomeSelectedAc.class);
+        intent = new Intent(TabsActivated.this, WelcomeSelectedAc.class);
         startActivity(intent);
         intent.putExtras(extras);
         startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
     public void openDetExpAc(View view) {
