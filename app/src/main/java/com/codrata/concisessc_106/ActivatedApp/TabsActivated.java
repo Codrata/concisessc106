@@ -25,6 +25,12 @@ public class TabsActivated extends NotesActivity {
     private ViewPager mViewPager;
     TextView dpLicense, dpEmail, dpDept, dpName;
 
+    @Override
+    public void onBackPressed() {
+        finish();
+        super.onBackPressed();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

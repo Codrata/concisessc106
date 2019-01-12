@@ -10,6 +10,11 @@ import com.codrata.concisessc_106.R;
 public class PastQuestionsAc extends AppCompatActivity {
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_past_questions_ac);

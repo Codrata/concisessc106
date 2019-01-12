@@ -26,20 +26,24 @@
                 android:layout_width="160dp"
                 android:layout_height="300dp"
                 android:layout_margin="10dp"
-                android:clickable="true"
-                android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:onClick="openWelcomeItemAc">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="openWelcomeItemAc"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openWelcomeItemAc"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />
@@ -79,12 +83,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="openDetExpAc"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openDetExpAc"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />
@@ -135,12 +145,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="openConPQAc"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:layout_width="64dp"
                         android:layout_height="64dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openConPQAc"
                         android:background="@drawable/ic_library_books_black_24dp"
                         android:padding="10dp"
                         android:scaleType="fitEnd" />

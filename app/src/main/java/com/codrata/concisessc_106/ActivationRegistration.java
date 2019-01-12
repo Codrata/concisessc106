@@ -177,6 +177,7 @@ public class ActivationRegistration extends AppCompatActivity {
                                         Toast.makeText(ActivationRegistration.this, "Registration Succesful", Toast.LENGTH_LONG).show();
                                         Intent i = new Intent(ActivationRegistration.this, WelcomeActivity.class);
                                         startActivity(i);
+                                        finish();
                                     } else {
                                         //display a failure message
                                     }
