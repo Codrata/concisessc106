@@ -1,7 +1,6 @@
 package com.codrata.concisessc_106.ActivatedApp;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -15,9 +14,6 @@ import com.codrata.concisessc_106.R;
 import com.codrata.concisessc_106.SectionsPageAdapter;
 import com.codrata.concisessc_106.Tab1FragmentAc;
 import com.codrata.concisessc_106.Tab2Fragment;
-import com.codrata.concisessc_106.Tab3Fragment;
-
-import static com.codrata.concisessc_106.ActivationActivity.PREFS_NAME;
 
 public class TabsActivated extends NotesActivity {
 
@@ -32,24 +28,6 @@ public class TabsActivated extends NotesActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, 0);
-        String licenseKey = prefs.getString("LICENSE_KEY", "");
-        String dispEmail = prefs.getString("EMAIL", "");
-        String dispDept = prefs.getString("DEPT", "");
-        String dispName = prefs.getString("DEPT", "");
-
-
-        dpLicense = findViewById(R.id.licenseCode);
-        dpEmail = findViewById(R.id.emailname);
-        dpDept = findViewById(R.id.dept_view);
-        dpName = findViewById(R.id.name);
-
-        dpLicense.setText(licenseKey);
-        dpEmail.setText(dispEmail);
-        dpEmail.setText(dispDept);
-        dpName.setText(dispName);
-
 
 
         super.onCreate(savedInstanceState);
@@ -73,7 +51,6 @@ public class TabsActivated extends NotesActivity {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new Tab1FragmentAc(), "ACTIVATED");
         adapter.addFragment(new Tab2Fragment(), "NOTES");
-        adapter.addFragment(new Tab3Fragment(), "PROFILE");
         viewPager.setAdapter(adapter);
     }
 

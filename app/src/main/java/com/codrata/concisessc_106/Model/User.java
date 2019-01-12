@@ -8,7 +8,7 @@ public class User {
     private String Pin;
     private String Department;
 
-    public User() {
+    public User(String s, String toString, String string, String s1) {
     }
 
     public User(String name, String email, String phone, String pin, String department) {

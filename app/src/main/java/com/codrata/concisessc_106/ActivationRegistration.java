@@ -94,8 +94,7 @@ public class ActivationRegistration extends AppCompatActivity {
     private void registerUser() {
         final String name = edtname.getText().toString().trim();
         final String email = edtemail.getText().toString().trim();
-        final String password = edtpin.getText().toString().trim();
-        final String phone = edtphone.getText().toString().trim();
+        final String password = edtphone.getText().toString().trim();
         final String department = edtdepartment.getText().toString().trim();
 
         SharedPreferences preferences = getSharedPreferences(PREFS_NAME, 0);
@@ -121,14 +120,9 @@ public class ActivationRegistration extends AppCompatActivity {
             mDialog.dismiss();
             return;
         }
-        if (password.isEmpty()) {
-            edtpin.setError("Pin is Required");
-            edtpin.requestFocus();
-            mDialog.dismiss();
-            return;
-        }
 
-        if (phone.isEmpty()) {
+
+        if (password.isEmpty()) {
             edtphone.setError("Phone Number is Required");
             edtphone.requestFocus();
             mDialog.dismiss();
@@ -149,15 +143,7 @@ public class ActivationRegistration extends AppCompatActivity {
         }
 
 
-        if (password.length() < 6) {
-            edtpin.setError("Password must be Greater than 5");
-            edtpin.requestFocus();
-            mDialog.dismiss();
-            return;
-        }
-
-
-        if (phone.length() != 11) {
+        if (password.length() != 11) {
             edtphone.setError("Please Input A Valid No");
             edtphone.requestFocus();
             mDialog.dismiss();
@@ -178,7 +164,7 @@ public class ActivationRegistration extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
 
-                            User user = new User(edtname.getText().toString(),edtemail.getText().toString(),edtphone.getText().toString(),edtpin.getText().toString(),edtdepartment.getText().toString());
+                            User user = new User(edtname.getText().toString(), edtemail.getText().toString(), edtphone.getText().toString(), edtdepartment.getText().toString());
                             //table_user.child(edtphone.getText().toString()).setValue(user);
 
                             FirebaseDatabase.getInstance().getReference("User")
