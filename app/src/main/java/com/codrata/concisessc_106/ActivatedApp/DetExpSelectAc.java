@@ -120,4 +120,18 @@ public class DetExpSelectAc extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
+
+    public void openMathsInEcons(View view) {
+
+        Intent intent = null;
+        Bundle extras = new Bundle();
+
+        intent = new Intent(getApplicationContext(), MainActivityActivated.class);
+
+        extras.putString("SAMPLE_FILE", "mathsinsocialsciences.pdf");
+        intent.putExtras(extras);
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+
+    }
 }
