@@ -330,6 +330,41 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
+                    android:onClick="openAddendum"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/icon7"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="10dip"
+                            app:srcCompat="@drawable/ic_import_contacts_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/addendum"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:text="@string/addendum_notes"
+                            android:textColor="@android:color/white"
+                            android:textSize="21sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
                     android:onClick="openMathsInEcons"
                     android:orientation="vertical">
 
@@ -356,17 +391,11 @@
                             android:textStyle="normal" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@android:color/darker_gray"></LinearLayout>
-
 
                 </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
-
 
     </RelativeLayout>
 

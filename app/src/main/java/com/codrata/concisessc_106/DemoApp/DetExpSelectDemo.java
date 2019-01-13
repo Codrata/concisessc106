@@ -132,4 +132,16 @@ public class DetExpSelectDemo extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
+
+    public void openAddendumDemo(View view) {
+        Intent intent = null;
+        Bundle extras = new Bundle();
+
+        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
+
+        extras.putString("SAMPLE_FILE", "addendumnotes.pdf");
+        intent.putExtras(extras);
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+    }
 }
