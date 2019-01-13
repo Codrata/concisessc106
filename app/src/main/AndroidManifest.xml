@@ -26,8 +26,12 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ActivatedApp.MainActivityActivated"
+            android:alwaysRetainTaskState="true"
+            android:exported="true"
             android:theme="@style/AppTheme" />
-        <activity android:name=".WelcomeActivity" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DemoApp.MainActivityDemo"
             android:alwaysRetainTaskState="true"
@@ -40,8 +44,12 @@
         <activity android:name=".ActivatedApp.DetExpSelectAc" />
         <activity android:name=".ActivatedApp.PastQuestionsAc" />
         <activity android:name=".ActivatedApp.WelcomeSelectedAc" />
-        <activity android:name=".DemoApp.TabsDemo" />
-        <activity android:name=".ActivatedApp.TabsActivated" />
+        <activity
+            android:name=".DemoApp.TabsDemo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivatedApp.TabsActivated"
+            android:screenOrientation="portrait" />
 
     </application>
 
