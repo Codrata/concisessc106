@@ -28,7 +28,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20012002.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2001-2002-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -39,7 +39,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20022003.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2002-2003-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -50,7 +50,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20032004.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2003-2004-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -62,7 +62,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20052006.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2005-2006-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -75,7 +75,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20062007.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2006-2007-compressed-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -87,7 +87,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20072008.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2007-2008-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -98,7 +98,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20082009.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2008-2009-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -109,7 +109,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20092010.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2009-2010-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -120,7 +120,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20102011.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2010-2011-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -131,7 +131,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20112012.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2011-2012-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -142,7 +142,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20122013.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2012-2013 merged-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -153,7 +153,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20132014.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2013-2014-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -164,7 +164,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20142015.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2014-2015-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -175,7 +175,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20152016.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2015-2016-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -186,7 +186,7 @@ public class PastQuestionsAc extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "pq20162017.pdf");
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2016-2017-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);

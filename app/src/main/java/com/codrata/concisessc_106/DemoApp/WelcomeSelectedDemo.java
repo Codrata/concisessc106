@@ -29,7 +29,7 @@ public class WelcomeSelectedDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "ssc106way.pdf");
+        extras.putString("SAMPLE_FILE", "WELCOME TO THE SSC106 WAY-1-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -43,7 +43,7 @@ public class WelcomeSelectedDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "gettingandactivatingtheapp.pdf");
+        extras.putString("SAMPLE_FILE", "GETTING AND ACTIVATING THE APPLICATION-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -56,7 +56,7 @@ public class WelcomeSelectedDemo extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "howtousetheapp.pdf");
+        extras.putString("SAMPLE_FILE", "USING THE SSC106 WAY (1)-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -70,7 +70,7 @@ public class WelcomeSelectedDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "topicreview.pdf");
+        extras.putString("SAMPLE_FILE", "TOPIC REVIEW-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -83,7 +83,7 @@ public class WelcomeSelectedDemo extends AppCompatActivity {
         Bundle extras = new Bundle();
 
         intent = new Intent(getApplicationContext(), MainActivityActivated.class);
-        extras.putString("SAMPLE_FILE", "basicoperations.pdf");
+        extras.putString("SAMPLE_FILE", "BASIC OPERATIONS IN MATHEMATICS-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);

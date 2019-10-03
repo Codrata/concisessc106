@@ -17,170 +17,170 @@ public class PastQuestionsDemo extends AppCompatActivity {
         setContentView(R.layout.activity_past_questions);
     }
 
-    public void openPQ20012002(View view) {
+    public void openAcPQ20012002(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20012002.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2001-2002-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20022003(View view) {
+    public void openAcPQ20022003(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20022003.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2002-2003-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20032004(View view) {
+    public void openAcPQ20032004(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20032004.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2003-2004-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20052006(View view) {
+    public void openAcPQ20052006(View view) {
 
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20052006.pdf");
-        intent.putExtras(extras);
-        startActivity(intent);
-        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-
-    }
-
-    public void openPQ20062007(View view) {
-
-        Intent intent = null;
-        Bundle extras = new Bundle();
-
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20062007.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2005-2006-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
 
     }
 
-    public void openPQ20072008(View view) {
+    public void openAcPQ20062007(View view) {
+
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20072008.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2006-2007-compressed-min.pdf");
+        intent.putExtras(extras);
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+
+    }
+
+    public void openAcPQ20072008(View view) {
+        Intent intent = null;
+        Bundle extras = new Bundle();
+
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2007-2008-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20082009(View view) {
+    public void openAcPQ20082009(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20082009.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2008-2009-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20092010(View view) {
+    public void openAcPQ20092010(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20092010.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2009-2010-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20102011(View view) {
+    public void openAcPQ20102011(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20102011.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2010-2011-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20112012(View view) {
+    public void openAcPQ20112012(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20112012.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2011-2012-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20122013(View view) {
+    public void openAcPQ20122013(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20122013.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2012-2013 merged-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20132014(View view) {
+    public void openAcPQ20132014(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20132014.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2013-2014-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20142015(View view) {
+    public void openAcPQ20142015(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20142015.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2014-2015-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20152016(View view) {
+    public void openAcPQ20152016(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20152016.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2015-2016-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openPQ20162017(View view) {
+    public void openAcPQ20162017(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
-        intent = new Intent(getApplicationContext(), MainActivityDemo.class);
-        extras.putString("SAMPLE_FILE", "pq20162017.pdf");
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2016-2017-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);

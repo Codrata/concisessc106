@@ -24,7 +24,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "functions.pdf");
+        extras.putString("SAMPLE_FILE", "FUNCTIONS (1).pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -36,7 +36,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "matrices.pdf");
+        extras.putString("SAMPLE_FILE", "MATRICES-merged-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -49,7 +49,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "differentiation.pdf");
+        extras.putString("SAMPLE_FILE", "DIFFERENTIATION (1)-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -61,7 +61,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "partialdifferentiation.pdf");
+        extras.putString("SAMPLE_FILE", "PARTIAL DIFFERENTIATION-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -73,7 +73,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
         Bundle extras = new Bundle();
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "differentialapplication.pdf");
+        extras.putString("SAMPLE_FILE", "DIFFERENTIATION APPLICATIONS-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -87,7 +87,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "integration.pdf");
+        extras.putString("SAMPLE_FILE", "INTEGRATION-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -101,7 +101,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "differentialequations.pdf");
+        extras.putString("SAMPLE_FILE", "DIFFERENTIAL EQUATIONS-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -115,7 +115,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "calculusapplicationtoeconomics.pdf");
+        extras.putString("SAMPLE_FILE", "CALCULUS APPLICATION TO ECO LATEST-compressed.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
@@ -127,7 +127,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
 
         intent = new Intent(getApplicationContext(), MainActivityDemo.class);
 
-        extras.putString("SAMPLE_FILE", "mathsinsocialsciences.pdf");
+        extras.putString("SAMPLE_FILE", "MATHEMATICS IN SOCIAL SCIENCES (2)-min.pdf");
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
