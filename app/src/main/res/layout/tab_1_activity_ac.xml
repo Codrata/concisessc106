@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
@@ -27,11 +27,11 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="160dp"
                     android:layout_height="300dp"
                     android:layout_margin="10dp"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
                     android:onClick="openWelcomeItemAc">
 
                     <LinearLayout
@@ -74,15 +74,15 @@
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="160dp"
                     android:layout_height="300dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
                     android:onClick="openDetExpAc">
 
                     <LinearLayout
@@ -126,7 +126,7 @@
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -138,13 +138,13 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
                     android:onClick="openConPQAc">
 
                     <LinearLayout
@@ -187,7 +187,7 @@
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
             </LinearLayout>
@@ -206,4 +206,4 @@
         </LinearLayout>
     </ScrollView>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
