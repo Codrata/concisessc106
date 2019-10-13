@@ -35,7 +35,7 @@ public class About extends AppCompatActivity {
                 .setDescription(getString(R.string.about_the_app_way))
                 .setImage(R.drawable.img_ssc106)
                 .addItem(releaseElement)
-                .addItem(new Element().setTitle("Version 1.00.2019"))
+                .addItem(new Element().setTitle("Version 1.10.2019"))
                 .addItem(ownerElement)
                 .addItem(developerElement)
                 .addGroup("INFO AND SUPPORT")

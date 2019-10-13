@@ -192,6 +192,17 @@ public class PastQuestionsAc extends AppCompatActivity {
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
+    public void openAcPQ20172018(View view) {
+        Intent intent = null;
+        Bundle extras = new Bundle();
+
+        intent = new Intent(getApplicationContext(), MainActivityActivated.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2017-2018-min.pdf");
+        intent.putExtras(extras);
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+    }
+
     public void openAcPQMisc(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();

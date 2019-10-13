@@ -133,7 +133,7 @@ public class DetExpSelectDemo extends AppCompatActivity {
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
-    public void openAddendumDemo(View view) {
+   /* public void openAddendumDemo(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();
 
@@ -143,5 +143,5 @@ public class DetExpSelectDemo extends AppCompatActivity {
         intent.putExtras(extras);
         startActivity(intent);
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-    }
+    }*/
 }

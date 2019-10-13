@@ -186,6 +186,16 @@ public class PastQuestionsDemo extends AppCompatActivity {
         overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
     }
 
+    public void openPQ20172018(View view) {
+        Intent intent = null;
+        Bundle extras = new Bundle();
+
+        intent = new Intent(getApplicationContext(), PastQuestionsDemo.class);
+        extras.putString("SAMPLE_FILE", "QUESTIONS 2017-2018-min");
+        intent.putExtras(extras);
+        startActivity(intent);
+        overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+    }
     public void openPQMisc(View view) {
         Intent intent = null;
         Bundle extras = new Bundle();

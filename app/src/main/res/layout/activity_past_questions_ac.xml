@@ -580,11 +580,12 @@
                     android:layout_height="1dp"
                     android:background="@android:color/darker_gray"></LinearLayout>
 
+
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
-                    android:onClick="openAcPQMisc"
+                    android:onClick="openAcPQ20172018"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -602,7 +603,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center|left"
-                            android:text="@string/sixteenth_session"
+                            android:text="@string/seveenteenth_session"
                             android:textColor="@android:color/white"
                             android:textSize="21sp"
                             android:textStyle="normal" />
@@ -615,6 +616,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@android:color/darker_gray"></LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="openAcPQMisc"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="10dip"
+                        app:srcCompat="@drawable/ic_import_contacts_black_24dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="@string/sixteenth_session"
+                        android:textColor="@android:color/white"
+                        android:textSize="21sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+
+                </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
